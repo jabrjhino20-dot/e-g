@@ -47,7 +47,7 @@ nav{background:rgba(3,17,31,0.97);backdrop-filter:blur(12px);border-bottom:0.5px
 .dd-item:hover{color:var(--gold);background:rgba(212,175,55,0.05);padding-left:22px}
 
 /* HERO */
-.hero{position:relative;height:100vh;min-height:600px;display:flex;align-items:center;overflow:hidden;margin-top:0;background:linear-gradient(135deg,rgba(2,12,24,0.90) 0%,rgba(7,26,45,0.90) 40%,rgba(10,35,64,0.90) 70%,rgba(3,17,31,0.90) 100%),url('fondo.jpg') center/cover no-repeat}
+.hero{position:relative;height:100vh;min-height:600px;display:flex;align-items:center;overflow:hidden;margin-top:0;background:linear-gradient(135deg,rgba(2,12,24,0.80) 0%,rgba(7,26,45,0.78) 40%,rgba(10,35,64,0.76) 70%,rgba(3,17,31,0.80) 100%),url('fondo.jpg') center/cover no-repeat}
 .hero-geo{position:absolute;inset:0;overflow:hidden;pointer-events:none}
 .hero-geo::before{content:'';position:absolute;width:600px;height:600px;border:1px solid rgba(212,175,55,0.06);border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%)}
 .hero-geo::after{content:'';position:absolute;width:900px;height:900px;border:1px solid rgba(212,175,55,0.04);border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%)}
@@ -86,6 +86,14 @@ nav{background:rgba(3,17,31,0.97);backdrop-filter:blur(12px);border-bottom:0.5px
 .sec-inner{max-width:1100px;margin:0 auto}
 .eyebrow{font-size:10px;letter-spacing:0.16em;color:var(--gold);text-transform:uppercase;margin-bottom:.75rem;font-weight:500}
 .sec-h{font-family:'Georgia',serif;font-size:30px;color:var(--white-pure);margin-bottom:.75rem;line-height:1.3;font-weight:500}
+@media(max-width:768px){.sec-h{font-size:22px}}
+@media(max-width:768px){.hero-title{font-size:28px;line-height:1.15}}
+@media(max-width:768px){.br-desktop{display:none}}
+@media(max-width:768px){.hero-btns{flex-direction:row;gap:8px}}
+@media(max-width:768px){.btn-gold,.btn-outline{font-size:11px;padding:10px 14px}}
+.titulo-mobile{display:none}
+@media(max-width:768px){.titulo-mobile{display:block}.titulo-desktop{display:none}}
+@media(max-width:768px){.hero{background:linear-gradient(135deg,rgba(2,12,24,0.97) 0%,rgba(7,26,45,0.97) 40%,rgba(10,35,64,0.97) 70%,rgba(3,17,31,0.97) 100%),url('fondo.jpg') center/cover no-repeat}}
 .sec-h em{color:var(--gold);font-style:normal}
 .sec-p{font-size:13px;color:var(--gray);line-height:1.85;max-width:520px;margin-bottom:2.5rem;font-weight:300}
 .gold-bar{width:44px;height:1.5px;background:linear-gradient(90deg,var(--gold),var(--gold-soft));margin-bottom:2rem}
@@ -95,25 +103,25 @@ nav{background:rgba(3,17,31,0.97);backdrop-filter:blur(12px);border-bottom:0.5px
 .svc-card{position:relative;border-radius:8px;overflow:hidden;cursor:pointer;height:220px;border:0.5px solid rgba(212,175,55,0.15);transition:all .25s;background:linear-gradient(135deg,var(--navy-light),var(--navy-dark))}
 .svc-card:hover{border-color:rgba(212,175,55,0.5);transform:translateY(-3px)}
 .svc-deco{position:absolute;top:-20px;right:-20px;width:120px;height:120px;border:1px solid rgba(212,175,55,0.06);border-radius:50%;pointer-events:none}
-.svc-content{position:absolute;inset:0;padding:1.5rem;display:flex;flex-direction:column;justify-content:flex-end}
+.svc-content{position:absolute;inset:0;padding:1.5rem;display:flex;flex-direction:column;justify-content:center}
 .svc-icon{font-size:26px;color:var(--gold);margin-bottom:.6rem}
-.svc-title{font-family:var(--fh);font-size:14px;color:var(--white-pure);margin-bottom:.4rem;line-height:1.3}
+.svc-title{font-family:var(--fb);font-size:14px;color:var(--white-pure);margin-bottom:.4rem;line-height:1.3;font-weight:600}
 .svc-desc{font-size:11px;color:var(--gray);line-height:1.6;font-weight:300;margin-bottom:.6rem}
 .svc-link{font-size:10px;color:var(--gold);display:flex;align-items:center;gap:4px;letter-spacing:0.06em;text-transform:uppercase}
 
 /* CURSOS */
-.courses-grid{display:grid;grid-template-columns:repeat(2,minmax(0,420px));gap:20px;justify-content:center}
-.course-card{border:0.5px solid rgba(212,175,55,0.18);border-radius:8px;overflow:hidden;background:linear-gradient(135deg,var(--navy-light),rgba(7,26,45,0.8));transition:all .2s}
+.courses-grid{display:grid;grid-template-columns:repeat(2,minmax(0,420px));gap:28px;justify-content:center}
+.course-card{border:0.5px solid rgba(212,175,55,0.18);border-radius:8px;overflow:hidden;background:linear-gradient(135deg,var(--navy-light),rgba(7,26,45,0.8));transition:all .2s;min-height:250px}
 .course-card:hover{border-color:rgba(212,175,55,0.9);transform:translateY(-4px);box-shadow:0 0 12px rgba(212,175,55,0.4),0 0 24px rgba(212,175,55,0.2);transition:all .3s}
-.course-top{height:110px;background:linear-gradient(90deg,var(--gold-deep),var(--gold),var(--gold-light));overflow:hidden;padding:0}
-.course-top img{width:100%;height:110px;object-fit:cover;display:block;object-position:center center;object-fit:contain;background:#071a2d}
-.course-body{padding:1.25rem}
+.course-top{height:105px;background:linear-gradient(90deg,var(--gold-deep),var(--gold),var(--gold-light));overflow:hidden;padding:0}
+.course-top img{width:100%;height:105px;object-fit:cover;display:block;object-position:center center;object-fit:cover}
+.course-body{padding:0.3rem 1.1rem 1.1rem;display:flex;flex-direction:column;justify-content:space-between;flex:1}
 .course-level{font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold-soft);margin-bottom:.5rem;font-weight:500}
 .course-title{font-size:13px;font-weight:500;color:var(--white);margin-bottom:.4rem;line-height:1.4}
 .course-desc{font-size:11px;color:var(--gray-dark);line-height:1.6;margin-bottom:.85rem;font-weight:300}
-.course-footer{display:flex;justify-content:space-between;align-items:center}
-.course-price{font-size:15px;color:var(--gold);font-weight:500}
-.course-btn{font-size:10px;color:var(--black);background:var(--gold);padding:6px 14px;border-radius:3px;cursor:pointer;font-weight:500;border:none;font-family:var(--fb);transition:all .2s}
+.course-footer{display:flex;justify-content:space-between;align-items:center;flex-wrap:nowrap;gap:8px}
+.course-price{font-size:13px;color:var(--gold);font-weight:500}
+.course-btn{font-size:9px;color:var(--black);background:var(--gold);padding:6px 12px;border-radius:3px;cursor:pointer;font-weight:500;border:none;font-family:var(--fb);transition:all .2s}
 .course-btn:hover{background:var(--gold-light)}
 
 /* LABORATORIO */
@@ -173,7 +181,7 @@ nav{background:rgba(3,17,31,0.97);backdrop-filter:blur(12px);border-bottom:0.5px
 .val p{font-size:11px;color:var(--gray-dark);line-height:1.55;font-weight:300}
 
 /* HERO SECCIÓN */
-.section-hero{padding:5rem 3rem;background:linear-gradient(135deg,var(--navy-dark) 0%,var(--navy) 50%,var(--navy-dark) 100%);position:relative;overflow:hidden}
+.section-hero{padding:2rem 3rem;background:linear-gradient(135deg,var(--navy-dark) 0%,var(--navy) 50%,var(--navy-dark) 100%);position:relative;overflow:hidden}
 .section-hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background-image:linear-gradient(rgba(212,175,55,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(212,175,55,0.025) 1px,transparent 1px);background-size:80px 80px;pointer-events:none}
 .sec-hero-content{position:relative;z-index:2;max-width:1100px;margin:0 auto}
 
@@ -265,6 +273,11 @@ footer{background:#020C16;padding:3.5rem 3rem 1.5rem;border-top:0.5px solid rgba
   .hero-stats{grid-template-columns:1fr 1fr}
   .svc-grid{grid-template-columns:1fr}
   .courses-grid{grid-template-columns:1fr;max-width:420px;margin:0 auto}
+.course-top img{object-fit:fill!important;background:#071a2d}
+.course-body{padding:0.2rem 1rem}
+.course-body{padding:0.2rem 1rem}
+
+.course-body{padding:0.2rem 1rem}
   .lab-grid{grid-template-columns:1fr}
   .pais-grid{grid-template-columns:repeat(2,1fr)}
   .lib-grid{grid-template-columns:1fr}
@@ -273,7 +286,7 @@ footer{background:#020C16;padding:3.5rem 3rem 1.5rem;border-top:0.5px solid rgba
   .footer-grid{grid-template-columns:1fr;gap:1.5rem}
   .nl-inner{flex-direction:column;text-align:center}
   .nl-input{width:100%}
-  .sec{padding:3rem 1.5rem}
+  .sec{padding:1rem 1.5rem}
   .values-grid{grid-template-columns:1fr}
   .profile-wrap{flex-direction:column}
   .cta-h{font-size:24px}
@@ -415,19 +428,19 @@ footer{background:#020C16;padding:3.5rem 3rem 1.5rem;border-top:0.5px solid rgba
     <div class="hero-content">
       <div class="hero-grid">
         <div>
-          <div class="hero-badge"><i class="ti ti-cpu"></i>PRIMERA CONSULTORA POLÍTICA INTEGRADA CON IA EN LATAM</div>
-          <h1 class="hero-title">Estrategia que gana.<br><em>Tecnología que decide.</em></h1>
-          <p class="hero-sub">Consultoría política profesional con inteligencia artificial integrada. Metodología propia, análisis de datos y estrategia de alto nivel para candidatos, equipos y autoridades en toda Latinoamérica.</p>
+          <div class="hero-badge"><i class="ti ti-cpu"></i>N°1 EN IA POLÍTICA · PERÚ → LATAM</div>
+          <h1 class="hero-title"><span class="titulo-desktop">Campañas que se diseñan<br>con datos. Se ganan <em>con estrategia.</em></span><span class="titulo-mobile">Datos que informan.<br><em>Estrategia que gana.</em></span></h1>
+          <p class="hero-sub">Tu campaña merece más que intuición. E&G combina análisis de datos, inteligencia artificial y estrategia de alto nivel para llevarte de candidato a autoridad — en cualquier mercado de Latinoamérica.</p>
           <div class="hero-btns">
             <button class="btn-gold" onclick="nav('contacto')">Agenda tu consulta estratégica</button>
             <button class="btn-outline" onclick="nav('servicios')">Ver servicios</button>
           </div>
         </div>
         <div class="hero-stats">
-          <div class="stat-card"><div class="stat-num">8+</div><div class="stat-label">Países LATAM en ruta de expansión</div></div>
-          <div class="stat-card"><div class="stat-num">4</div><div class="stat-label">Líneas de negocio integradas</div></div>
-          <div class="stat-card"><div class="stat-num">IA</div><div class="stat-label">En cada etapa de la campaña</div></div>
-          <div class="stat-card"><div class="stat-num">24/7</div><div class="stat-label">Bot WhatsApp activo de campaña</div></div>
+          <div class="stat-card"><div class="stat-num">8+</div><div class="stat-label">Mercados en LATAM</div></div>
+          <div class="stat-card"><div class="stat-num">100%</div><div class="stat-label">Basada en datos</div></div>
+          <div class="stat-card"><div class="stat-num">IA</div><div class="stat-label">En tu campaña</div></div>
+          <div class="stat-card"><div class="stat-num">24/7</div><div class="stat-label">Presencia digital automatizada</div></div>
         </div>
       </div>
     </div>
@@ -448,14 +461,14 @@ footer{background:#020C16;padding:3.5rem 3rem 1.5rem;border-top:0.5px solid rgba
   <div class="sec sec-navy">
     <div class="sec-inner">
       <p class="eyebrow">Consultoría</p>
-      <h2 class="sec-h">Servicios especializados<br>en estrategia política</h2>
+      <h2 class="sec-h">Soluciones estratégicas<br>para <em>ganar elecciones</em></h2>
       <div class="gold-bar"></div>
       <div class="svc-grid">
-        <div class="svc-card" onclick="nav('servicios')"><div class="svc-deco"></div><div class="svc-content"><i class="ti ti-trophy svc-icon"></i><h3 class="svc-title">Campañas electorales</h3><p class="svc-desc">Dirección, planificación y ejecución con metodología E&G e IA integrada.</p><div class="svc-link">Ver más <i class="ti ti-arrow-right"></i></div></div></div>
-        <div class="svc-card" onclick="nav('servicios')"><div class="svc-deco"></div><div class="svc-content"><i class="ti ti-user-star svc-icon"></i><h3 class="svc-title">Imagen electoral y gubernamental</h3><p class="svc-desc">Posicionamiento y narrativa para candidatos y autoridades en ejercicio.</p><div class="svc-link">Ver más <i class="ti ti-arrow-right"></i></div></div></div>
-        <div class="svc-card" onclick="nav('servicios')"><div class="svc-deco"></div><div class="svc-content"><i class="ti ti-device-mobile svc-icon"></i><h3 class="svc-title">Marketing político digital</h3><p class="svc-desc">Estrategia 360°: redes, pauta, contenido y bots de WhatsApp.</p><div class="svc-link">Ver más <i class="ti ti-arrow-right"></i></div></div></div>
-        <div class="svc-card" onclick="nav('lab')"><div class="svc-deco"></div><div class="svc-content"><i class="ti ti-flask svc-icon"></i><h3 class="svc-title">Laboratorio de IA política</h3><p class="svc-desc">War room digital, análisis territorial y modelos predictivos electorales.</p><div class="svc-link">Ver más <i class="ti ti-arrow-right"></i></div></div></div>
-        <div class="svc-card" onclick="nav('servicios')"><div class="svc-deco"></div><div class="svc-content"><i class="ti ti-speakerphone svc-icon"></i><h3 class="svc-title">Comunicación institucional</h3><p class="svc-desc">Estrategia para alcaldes, regidores y funcionarios en ejercicio.</p><div class="svc-link">Ver más <i class="ti ti-arrow-right"></i></div></div></div>
+        <div class="svc-card" onclick="nav('servicios')"><div class="svc-deco"></div><div class="svc-content"><i class="ti ti-trophy svc-icon"></i><h3 class="svc-title">Campañas electorales</h3><p class="svc-desc">Diseñamos tu ruta a la victoria: diagnóstico territorial, estrategia de campaña y ejecución con IA en cada etapa.</p><div class="svc-link">Ver más <i class="ti ti-arrow-right"></i></div></div></div>
+        <div class="svc-card" onclick="nav('servicios')"><div class="svc-deco"></div><div class="svc-content"><i class="ti ti-user-star svc-icon"></i><h3 class="svc-title">Imagen electoral y gubernamental</h3><p class="svc-desc">Construimos la identidad que conecta con el votante: mensaje, narrativa y presencia pública de alto impacto.</p><div class="svc-link">Ver más <i class="ti ti-arrow-right"></i></div></div></div>
+        <div class="svc-card" onclick="nav('servicios')"><div class="svc-deco"></div><div class="svc-content"><i class="ti ti-device-mobile svc-icon"></i><h3 class="svc-title">Marketing político digital</h3><p class="svc-desc">Presencia digital total: redes, pauta segmentada, contenido político y bots de WhatsApp automatizados.</p><div class="svc-link">Ver más <i class="ti ti-arrow-right"></i></div></div></div>
+        <div class="svc-card" onclick="nav('lab')"><div class="svc-deco"></div><div class="svc-content"><i class="ti ti-flask svc-icon"></i><h3 class="svc-title">Laboratorio de IA política</h3><p class="svc-desc">Tecnología política de vanguardia: war room digital, mapeo de votantes y modelos predictivos con IA.</p><div class="svc-link">Ver más <i class="ti ti-arrow-right"></i></div></div></div>
+        <div class="svc-card" onclick="nav('servicios')"><div class="svc-deco"></div><div class="svc-content"><i class="ti ti-speakerphone svc-icon"></i><h3 class="svc-title">Comunicación institucional</h3><p class="svc-desc">Gestión de imagen para autoridades en función: comunicación, crisis y posicionamiento institucional.</p><div class="svc-link">Ver más <i class="ti ti-arrow-right"></i></div></div></div>
         <div class="svc-card" onclick="nav('contacto')" style="border-color:rgba(212,175,55,0.3)"><div class="svc-content" style="justify-content:center;align-items:center;text-align:center"><i class="ti ti-calendar svc-icon"></i><h3 class="svc-title">Consulta estratégica inicial</h3><p class="svc-desc">Diagnóstico sin costo. Propuesta en 48 horas.</p><div class="svc-link" style="justify-content:center">Agendar ahora <i class="ti ti-arrow-right"></i></div></div></div>
       </div>
     </div>
@@ -464,9 +477,9 @@ footer{background:#020C16;padding:3.5rem 3rem 1.5rem;border-top:0.5px solid rgba
   <div class="sec sec-dark">
     <div class="sec-inner">
       <p class="eyebrow">Escuela E<span style="font-family:'Georgia',serif;">&</span>G</p>
-      <h2 class="sec-h">Formación política de alto nivel<br>para toda <em>Latinoamérica</em></h2>
+      <h2 class="sec-h">Aprende a ganar.<br>Formación política real para <em>Latinoamérica</em></h2>
       <div class="gold-bar"></div>
-      <p class="sec-p">Programas con metodología propia, manuales exclusivos y campus virtual. Aprende con herramientas de IA reales aplicadas a campañas desde cualquier país.</p>
+      <p class="sec-p">Cursos diseñados por consultores activos, con herramientas de IA reales y metodología probada en campañas. Desde cualquier país, a tu ritmo.</p>
       <div class="courses-grid">
         <div class="course-card"><div class="course-top"><img src="curso1.png" alt="IA campañas"/></div><div class="course-body"><p class="course-level">Programa intensivo · 10–12 semanas</p><h4 class="course-title">IA aplicada a campañas electorales</h4><p class="course-desc">Claude, ChatGPT, análisis de datos, bots y war room digital. Incluye manual exclusivo del Laboratorio E&G.</p><div class="course-footer"><span class="course-price">USD 183</span><button class="course-btn" onclick="nav('contacto')">Inscribirme</button></div></div></div>
         <div class="course-card"><div class="course-top"><img src="curso2.png" alt="Estrategia electoral"/></div><div class="course-body"><p class="course-level">Curso completo · 6–8 semanas</p><h4 class="course-title">Estrategia electoral y posicionamiento</h4><p class="course-desc">Diseño de campañas ganadoras con metodología E&G. Análisis de escenario y estrategia territorial.</p><div class="course-footer"><span class="course-price">USD 105</span><button class="course-btn" onclick="nav('contacto')">Inscribirme</button></div></div></div>
@@ -734,7 +747,7 @@ footer{background:#020C16;padding:3.5rem 3rem 1.5rem;border-top:0.5px solid rgba
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
-      <div class="fb-logo" style="display:flex;align-items:center;gap:10px;"><img src="logo.png" style="width:50px;height:50px;object-fit:contain;"/> · Estrategia & Gobernanza 2.0 S.A.C.</div>
+      <div class="fb-logo" style="display:flex;align-items:center;gap:10px;"><img src="logo.png" style="width:50px;height:50px;object-fit:contain;"/> Estrategia & Gobernanza 2.0 S.A.C.</div>
       <p>La primera consultora política de Latinoamérica con inteligencia artificial integrada en cada etapa de la campaña. Desde Lima al continente.</p>
       <div class="footer-social">
         <div class="social-btn"><i class="ti ti-brand-facebook"></i></div>
