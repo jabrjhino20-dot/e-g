@@ -81,6 +81,7 @@ nav{background:rgba(3,17,31,0.97);backdrop-filter:blur(12px);border-bottom:0.5px
 /* SECCIONES */
 .sec{padding:5rem 3rem}
 .sec-dark{background:var(--navy-dark)}
+#lab-hero{background:linear-gradient(rgba(3,17,31,0.85),rgba(3,17,31,0.85)),url('fondo-lab.jpg') center/cover no-repeat}
 .sec-navy{background:var(--navy)}
 .sec-black{background:var(--carbon)}
 .sec-inner{max-width:1100px;margin:0 auto}
@@ -130,7 +131,7 @@ nav{background:rgba(3,17,31,0.97);backdrop-filter:blur(12px);border-bottom:0.5px
 .lab-box:hover{border-color:rgba(212,175,55,0.5)}
 .lab-box::before{content:'';position:absolute;top:-30px;right:-30px;width:100px;height:100px;border:1px solid rgba(212,175,55,0.05);border-radius:50%}
 .lab-ico2{font-size:28px;color:var(--gold);margin-bottom:.75rem}
-.lab-box h3{font-family:var(--fh);font-size:15px;color:var(--white-pure);margin-bottom:.5rem}
+.lab-box h3{font-family:var(--fb);font-weight:600;font-size:15px;color:var(--white-pure);margin-bottom:.5rem}
 .lab-box p{font-size:11px;color:var(--gray);line-height:1.65;font-weight:300}
 
 /* PAÍSES */
@@ -404,11 +405,11 @@ footer{background:#020C16;padding:3.5rem 3rem 1.5rem;border-top:0.5px solid rgba
     <div class="menu-item" onclick="nav('home')">Inicio</div>
 <div class="menu-item" onclick="this.querySelector('.dropdown').style.display=this.querySelector('.dropdown').style.display==='block'?'none':'block'">Consultoría <i class="ti ti-chevron-down"></i>
       <div class="dropdown">
-        <span class="dd-item" onclick="nav('servicios')">Campañas electorales</span>
-        <span class="dd-item" onclick="nav('servicios')">Imagen electoral y gubernamental</span>
-        <span class="dd-item" onclick="nav('servicios')">Marketing político digital</span>
-        <span class="dd-item" onclick="nav('servicios')">Comunicación institucional</span>
-        <span class="dd-item" onclick="nav('lab')">Laboratorio de IA política</span>
+        <span class="dd-item" onclick="event.stopPropagation();nav('servicios')">Campañas electorales</span>
+        <span class="dd-item" onclick="event.stopPropagation();nav('servicios')">Imagen electoral y gubernamental</span>
+        <span class="dd-item" onclick="event.stopPropagation();nav('servicios')">Marketing político digital</span>
+        <span class="dd-item" onclick="event.stopPropagation();nav('servicios')">Comunicación institucional</span>
+        <span class="dd-item" onclick="event.stopPropagation();nav('lab')">Laboratorio de IA política</span>
       </div>
     </div>
     <div class="menu-item" onclick="nav('escuela')">Escuela E&G</div>
@@ -549,18 +550,19 @@ footer{background:#020C16;padding:3.5rem 3rem 1.5rem;border-top:0.5px solid rgba
 
 <!-- ===== LAB ===== -->
 <div id="p-lab" class="page">
-  <div class="section-hero">
+  <div class="section-hero" id="lab-hero">
     <div class="sec-hero-content">
       <p class="eyebrow">Laboratorio de Inteligencia Política</p>
       <h2 class="sec-h">Donde la ciencia política<br>se fusiona con la <em>IA</em></h2>
       <div class="gold-bar"></div>
       <p class="sec-p">Unidad de I+D de E&G. Produce metodología propia, análisis electorales regionales y publicaciones de la Librería.</p>
       <div class="lab-grid">
-        <div class="lab-box"><i class="ti ti-robot lab-ico2"></i><h3>Bots de WhatsApp para candidatos</h3><p>Comunicación automatizada con votantes. Movilización, respuestas y reportes en tiempo real durante campaña.</p></div>
-        <div class="lab-box"><i class="ti ti-device-desktop-analytics lab-ico2"></i><h3>War room digital integrado</h3><p>Monitoreo de redes, análisis de sentimiento, alertas de crisis y dashboard estratégico en tiempo real.</p></div>
-        <div class="lab-box"><i class="ti ti-map-pin lab-ico2"></i><h3>Análisis territorial con IA</h3><p>Datos censales y electorales para mapear zonas de oportunidad e identificar votantes indecisos por distrito.</p></div>
-        <div class="lab-box"><i class="ti ti-microscope lab-ico2"></i><h3>Investigación electoral LATAM</h3><p>Análisis de resultados electorales regionales, modelos de comportamiento del votante y prospectiva política.</p></div>
+        <div class="lab-box"><i class="ti ti-robot lab-ico2"></i><h3>Bots de WhatsApp para candidatos</h3><p>Responde a miles de votantes a la vez. Moviliza, informa y reporta resultados en tiempo real — sin contratar más personal.</p></div>
+        <div class="lab-box"><i class="ti ti-device-desktop-analytics lab-ico2"></i><h3>War room digital integrado</h3><p>Toma decisiones con datos en vivo: detecta crisis antes que la prensa y ajusta tu estrategia al instante.</p></div>
+        <div class="lab-box"><i class="ti ti-map-pin lab-ico2"></i><h3>Análisis territorial con IA</h3><p>Sabe exactamente dónde están tus votos. Identifica zonas de oportunidad e indecisos calle por calle.</p></div>
+        <div class="lab-box"><i class="ti ti-microscope lab-ico2"></i><h3>Investigación electoral LATAM</h3><p>Aprende de elecciones pasadas en toda LATAM para predecir el comportamiento del votante en la tuya.</p></div>
       </div>
+      <div style="text-align:center;margin-top:2rem"><button class="btn-gold" onclick="nav('contacto')">Solicita una demo del Laboratorio E&G</button></div>
     </div>
   </div>
 </div>
@@ -683,14 +685,14 @@ footer{background:#020C16;padding:3.5rem 3rem 1.5rem;border-top:0.5px solid rgba
         </svg>
         <div class="profile-body">
           <h3>Jhino Barreto Ramírez</h3>
-          <p class="profile-role">Director Estratégico · Fundador</p><p style="margin:8px 0 12px;font-size:13px;color:var(--gold);font-weight:600;letter-spacing:1px">9 Campañas dirigidas &nbsp;·&nbsp; 3 Países &nbsp;·&nbsp; +5 años de experiencia</p>
-          <p>Politólogo de la Universidad Nacional Mayor de San Marcos (UNMSM) y estratega electoral con más de 5 años de experiencia en consultoría política. Ha dirigido campañas municipales y congresales en Perú y campañas internacionales en México. Fundador de Estrategia & Gobernanza — la primera consultora política con inteligencia artificial integrada del Perú — con una misión clara: llevar candidatos al poder con datos, tecnología y estrategia de alto nivel. Construye hoy la red de consultoría política más innovadora de Latinoamérica.</p>
+          <p class="profile-role">Director Estratégico · Fundador</p><p style="margin:8px 0 12px;font-size:13px;color:var(--gold);font-weight:600;letter-spacing:1px">9 campañas · 3 países · +5 años</p>
+          <p style="text-align:justify">Politólogo de la Universidad Nacional Mayor de San Marcos (UNMSM) y estratega electoral con más de 5 años de experiencia en consultoría política. Ha dirigido campañas municipales y congresales en Perú y campañas internacionales en México. Fundador de Estrategia & Gobernanza — la primera consultora política con inteligencia artificial integrada del Perú — con una misión clara: llevar candidatos al poder con datos, tecnología y estrategia de alto nivel. Construye hoy la red de consultoría política más innovadora de Latinoamérica.</p>
         </div>
       </div>
       <div class="values-grid">
-        <div class="val"><i class="ti ti-microscope"></i><h4>Ciencia política</h4><p>Enfoque profesional basado en análisis técnico, no improvisación.</p></div>
-        <div class="val"><i class="ti ti-cpu"></i><h4>IA integrada</h4><p>Primera consultora de Perú con IA en cada etapa de la campaña.</p></div>
-        <div class="val"><i class="ti ti-world"></i><h4>Visión LATAM</h4><p>Metodología replicable en cualquier mercado político de la región.</p></div>
+        <div class="val"><i class="ti ti-microscope"></i><h4>Ciencia política</h4><p>Cada decisión respaldada por análisis político riguroso y metodología probada.</p></div>
+        <div class="val"><i class="ti ti-cpu"></i><h4>IA integrada</h4><p>Inteligencia artificial aplicada desde el diagnóstico hasta el día de la elección.</p></div>
+        <div class="val"><i class="ti ti-world"></i><h4>Visión LATAM</h4><p>Una metodología diseñada para ganar en cualquier mercado político de Latinoamérica.</p></div>
       </div>
     </div>
   </div>
@@ -750,11 +752,11 @@ footer{background:#020C16;padding:3.5rem 3rem 1.5rem;border-top:0.5px solid rgba
       <div class="fb-logo" style="display:flex;align-items:center;gap:10px;"><img src="logo.png" style="width:50px;height:50px;object-fit:contain;"/> Estrategia & Gobernanza 2.0 S.A.C.</div>
       <p>La primera consultora política de Latinoamérica con inteligencia artificial integrada en cada etapa de la campaña. Desde Lima al continente.</p>
       <div class="footer-social">
-        <div class="social-btn"><i class="ti ti-brand-facebook"></i></div>
-        <div class="social-btn"><i class="ti ti-brand-instagram"></i></div>
-        <div class="social-btn"><i class="ti ti-brand-linkedin"></i></div>
-        <div class="social-btn"><i class="ti ti-brand-tiktok"></i></div>
-        <div class="social-btn"><i class="ti ti-brand-youtube"></i></div>
+        <a href="https://www.facebook.com/share/1CswLbvqYM/" target="_blank" class="social-btn"><i class="ti ti-brand-facebook"></i></a>
+        <a href="https://www.instagram.com/estrategiaygobernanza_" target="_blank" class="social-btn"><i class="ti ti-brand-instagram"></i></a>
+        
+        
+        
       </div>
     </div>
     <div class="footer-col">
@@ -773,7 +775,7 @@ footer{background:#020C16;padding:3.5rem 3rem 1.5rem;border-top:0.5px solid rgba
     </div>
     <div class="footer-col">
       <h4>Contacto</h4>
-      <div style="font-size:11px;color:var(--gray-dark);margin-bottom:8px">🇵🇪 Lima, Perú</div>
+      <div style="font-size:11px;color:var(--gray-dark);margin-bottom:8px">Santiago de Surco, Lima · Perú</div>
       <a>eygconsultora.com</a>
       <a onclick="nav('contacto')">Agendar consulta</a>
     </div>
