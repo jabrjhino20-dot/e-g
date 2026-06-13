@@ -153,7 +153,14 @@ nav{background:rgba(3,17,31,0.97);backdrop-filter:blur(12px);border-bottom:0.5px
 .lib-cover-img i{font-size:64px;color:var(--gold)}
 .lib-meta-row{display:flex;justify-content:space-between;color:var(--gray);font-size:11px;padding:6px 0;border-bottom:0.5px solid rgba(255,255,255,0.06)}
 .lib-meta-row span{color:var(--white-pure);font-weight:500}
-@media(max-width:768px){.lib-detail{grid-template-columns:1fr}.lib-cover{position:static;max-width:200px;margin:0 auto 1.5rem}}
+@media(max-width:768px){
+.lib-detail{display:flex;flex-direction:column}
+.lib-cover{display:contents}
+.lib-cover-img{max-width:200px;margin:0 auto 1.5rem;order:1}
+.lib-meta-row{max-width:200px;margin:0 auto;width:100%;order:1}
+.lib-detail>div:last-child{order:2}
+.crs-price-box{order:3;margin:1.5rem auto 0!important;max-width:280px;align-self:center}
+}
 .crs-timeline{position:relative;padding-left:42px;margin-top:1.5rem}
 .crs-timeline::before{content:'';position:absolute;left:13px;top:6px;bottom:6px;width:2px;background:linear-gradient(to bottom,var(--gold),rgba(212,175,55,0.1))}
 .crs-tl-item{position:relative;margin-bottom:1.75rem}
@@ -177,6 +184,13 @@ nav{background:rgba(3,17,31,0.97);backdrop-filter:blur(12px);border-bottom:0.5px
 .crs-agenda-item:last-child{border-bottom:none}
 .crs-agenda-time{color:var(--gold);font-size:12px;font-weight:700;font-family:var(--fb);min-width:54px;flex-shrink:0}
 .crs-agenda-item p{color:var(--gray);font-size:13px;line-height:1.5;margin:0}
+.svc-cta{text-align:center;border:0.5px solid rgba(212,175,55,0.25);border-radius:8px;padding:2rem 1.5rem;margin-top:2rem;background:rgba(212,175,55,0.04)}
+.svc-cta h3{color:var(--white-pure);font-family:'Georgia',serif;font-size:20px;font-weight:500;margin-bottom:.5rem}
+.svc-cta p{color:var(--gray);font-size:13px;margin-bottom:1.25rem}
+.svc-proof{color:var(--gold);font-size:12px;font-weight:600;text-align:center;margin-top:.5rem}
+.svc-hero-bg{background:linear-gradient(rgba(3,17,31,0.85),rgba(3,17,31,0.85)),url('fondo.jpg') center/cover no-repeat}
+.crs-acc-head .acc-label{display:flex;align-items:center;gap:10px}
+.crs-acc-head .acc-label i{color:var(--gold);font-size:16px;flex-shrink:0}
 
 /* LABORATORIO */
 .lab-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
@@ -477,8 +491,8 @@ footer{background:#020C16;padding:3.5rem 3rem 1.5rem;border-top:0.5px solid rgba
     <div class="menu-item" onclick="nav('home')">Inicio</div>
 <div class="menu-item" onclick="this.querySelector('.dropdown').style.display=this.querySelector('.dropdown').style.display==='block'?'none':'block'">Consultoría <i class="ti ti-chevron-down"></i>
       <div class="dropdown">
-        <span class="dd-item" onclick="event.stopPropagation();nav('servicios')">Campañas electorales</span>
-        <span class="dd-item" onclick="event.stopPropagation();nav('servicios')">Imagen electoral y gubernamental</span>
+        <span class="dd-item" onclick="event.stopPropagation();nav('svc1')">Campañas electorales</span>
+        <span class="dd-item" onclick="event.stopPropagation();nav('svc2')">Imagen electoral y gubernamental</span>
         <span class="dd-item" onclick="event.stopPropagation();nav('servicios')">Marketing político digital</span>
         <span class="dd-item" onclick="event.stopPropagation();nav('servicios')">Comunicación institucional</span>
         <span class="dd-item" onclick="event.stopPropagation();nav('lab')">Laboratorio de IA política</span>
@@ -537,8 +551,8 @@ footer{background:#020C16;padding:3.5rem 3rem 1.5rem;border-top:0.5px solid rgba
       <h2 class="sec-h">Soluciones estratégicas<br>para <em>ganar elecciones</em></h2>
       <div class="gold-bar"></div>
       <div class="svc-grid">
-        <div class="svc-card" onclick="nav('servicios')"><div class="svc-deco"></div><div class="svc-content"><i class="ti ti-trophy svc-icon"></i><h3 class="svc-title">Campañas electorales</h3><p class="svc-desc">Diseñamos tu ruta a la victoria: diagnóstico territorial, estrategia de campaña y ejecución con IA en cada etapa.</p><div class="svc-link">Ver más <i class="ti ti-arrow-right"></i></div></div></div>
-        <div class="svc-card" onclick="nav('servicios')"><div class="svc-deco"></div><div class="svc-content"><i class="ti ti-user-star svc-icon"></i><h3 class="svc-title">Imagen electoral y gubernamental</h3><p class="svc-desc">Construimos la identidad que conecta con el votante: mensaje, narrativa y presencia pública de alto impacto.</p><div class="svc-link">Ver más <i class="ti ti-arrow-right"></i></div></div></div>
+        <div class="svc-card" onclick="nav('svc1')"><div class="svc-deco"></div><div class="svc-content"><i class="ti ti-trophy svc-icon"></i><h3 class="svc-title">Campañas electorales</h3><p class="svc-desc">Diseñamos tu ruta a la victoria: diagnóstico territorial, estrategia de campaña y ejecución con IA en cada etapa.</p><div class="svc-link">Ver más <i class="ti ti-arrow-right"></i></div></div></div>
+        <div class="svc-card" onclick="nav('svc2')"><div class="svc-deco"></div><div class="svc-content"><i class="ti ti-user-star svc-icon"></i><h3 class="svc-title">Imagen electoral y gubernamental</h3><p class="svc-desc">Construimos la identidad que conecta con el votante: mensaje, narrativa y presencia pública de alto impacto.</p><div class="svc-link">Ver más <i class="ti ti-arrow-right"></i></div></div></div>
         <div class="svc-card" onclick="nav('servicios')"><div class="svc-deco"></div><div class="svc-content"><i class="ti ti-device-mobile svc-icon"></i><h3 class="svc-title">Marketing político digital</h3><p class="svc-desc">Presencia digital total: redes, pauta segmentada, contenido político y bots de WhatsApp automatizados.</p><div class="svc-link">Ver más <i class="ti ti-arrow-right"></i></div></div></div>
         <div class="svc-card" onclick="nav('lab')"><div class="svc-deco"></div><div class="svc-content"><i class="ti ti-flask svc-icon"></i><h3 class="svc-title">Laboratorio de IA política</h3><p class="svc-desc">Tecnología política de vanguardia: war room digital, mapeo de votantes y modelos predictivos con IA.</p><div class="svc-link">Ver más <i class="ti ti-arrow-right"></i></div></div></div>
         <div class="svc-card" onclick="nav('servicios')"><div class="svc-deco"></div><div class="svc-content"><i class="ti ti-speakerphone svc-icon"></i><h3 class="svc-title">Comunicación institucional</h3><p class="svc-desc">Gestión de imagen para autoridades en función: comunicación, crisis y posicionamiento institucional.</p><div class="svc-link">Ver más <i class="ti ti-arrow-right"></i></div></div></div>
@@ -924,6 +938,242 @@ footer{background:#020C16;padding:3.5rem 3rem 1.5rem;border-top:0.5px solid rgba
   </div>
 </div>
 
+<!-- ===== LIBRO 2 ===== -->
+<div id="p-lib2" class="page">
+  <div class="section-hero">
+    <div class="sec-hero-content">
+      <p class="eyebrow">Librería E&G</p>
+      <h2 class="sec-h">Estrategia territorial E&G</h2>
+      <div class="gold-bar"></div>
+      <p class="sec-p">El mapa que necesitas para saber exactamente dónde están tus votos — y dónde ganarlos.</p>
+
+      <div class="lib-detail">
+        <div class="lib-cover">
+          <div class="lib-cover-img"><i class="ti ti-map"></i></div>
+          <div class="lib-meta-row"><span>Formato</span>PDF + Plantillas Excel</div>
+          <div class="lib-meta-row"><span>Páginas</span>32</div>
+          <div class="lib-meta-row"><span>Idioma</span>Español</div>
+          <div class="crs-price-box" style="margin-top:1.25rem">
+            <div class="price">USD 18</div>
+            <div class="sub">Acceso inmediato tras compra</div>
+            <button class="btn-gold" style="width:100%;padding:13px;font-size:13px" onclick="addToCart('lib2','Estrategia territorial E&G',18)">Comprar</button>
+          </div>
+        </div>
+        <div>
+          <div class="crs-block">
+            <h3>De qué trata</h3>
+            <p class="sec-p" style="margin-bottom:0">Esta guía te enseña la metodología E&G para mapear un territorio electoral: identificar zonas de fortaleza, indecisos y oportunidad, y planificar el trabajo de campo ("puerta a puerta") con datos reales, no intuición.</p>
+          </div>
+          <div class="crs-block">
+            <h3>¿Por qué te conviene?</h3>
+            <ul class="crs-list">
+              <li><i class="ti ti-check"></i>Identifica en minutos dónde concentrar tus recursos de campaña</li>
+              <li><i class="ti ti-check"></i>Plantillas de mapeo listas para usar en Excel/Sheets</li>
+              <li><i class="ti ti-check"></i>Metodología aplicada en campañas municipales y regionales reales</li>
+              <li><i class="ti ti-check"></i>Reduce el gasto en publicidad mal dirigida</li>
+            </ul>
+          </div>
+          <div class="crs-block">
+            <h3>Contenido</h3>
+            <div class="crs-module"><span>01</span>Fundamentos del mapeo territorial</div>
+            <div class="crs-module"><span>02</span>Identificación de zonas de oportunidad</div>
+            <div class="crs-module"><span>03</span>Segmentación de electores por zona</div>
+            <div class="crs-module"><span>04</span>Plan de trabajo de campo ("puerta a puerta")</div>
+            <div class="crs-module"><span>05</span>Plantillas de mapeo (Excel/Sheets)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== LIBRO 3 ===== -->
+<div id="p-lib3" class="page">
+  <div class="section-hero">
+    <div class="sec-hero-content">
+      <p class="eyebrow">Librería E&G</p>
+      <h2 class="sec-h">Comunicación política digital</h2>
+      <div class="gold-bar"></div>
+      <p class="sec-p">El playbook para que tu mensaje llegue, conecte y movilice — en redes, WhatsApp y pauta digital.</p>
+
+      <div class="lib-detail">
+        <div class="lib-cover">
+          <div class="lib-cover-img"><i class="ti ti-message-circle"></i></div>
+          <div class="lib-meta-row"><span>Formato</span>PDF + Calendario (Sheets)</div>
+          <div class="lib-meta-row"><span>Páginas</span>38</div>
+          <div class="lib-meta-row"><span>Idioma</span>Español</div>
+          <div class="crs-price-box" style="margin-top:1.25rem">
+            <div class="price">USD 18</div>
+            <div class="sub">Acceso inmediato tras compra</div>
+            <button class="btn-gold" style="width:100%;padding:13px;font-size:13px" onclick="addToCart('lib3','Comunicación política digital',18)">Comprar</button>
+          </div>
+        </div>
+        <div>
+          <div class="crs-block">
+            <h3>De qué trata</h3>
+            <p class="sec-p" style="margin-bottom:0">Una guía práctica para diseñar la presencia digital de una campaña: qué publicar, cómo estructurar bots de WhatsApp, y cómo invertir en pauta digital de forma eficiente, con ejemplos reales aplicados en campañas de LATAM.</p>
+          </div>
+          <div class="crs-block">
+            <h3>¿Por qué te conviene?</h3>
+            <ul class="crs-list">
+              <li><i class="ti ti-check"></i>Calendario de contenidos listo para adaptar a tu campaña</li>
+              <li><i class="ti ti-check"></i>Guion base para bots de WhatsApp de movilización</li>
+              <li><i class="ti ti-check"></i>Criterios para invertir en pauta digital sin desperdiciar presupuesto</li>
+              <li><i class="ti ti-check"></i>Casos reales de campañas digitales exitosas en LATAM</li>
+            </ul>
+          </div>
+          <div class="crs-block">
+            <h3>Contenido</h3>
+            <div class="crs-module"><span>01</span>Estrategia de presencia digital para campañas</div>
+            <div class="crs-module"><span>02</span>Calendario editorial y tipos de contenido</div>
+            <div class="crs-module"><span>03</span>Bots de WhatsApp: guion y flujos</div>
+            <div class="crs-module"><span>04</span>Pauta digital: segmentación y presupuesto</div>
+            <div class="crs-module"><span>05</span>Casos de éxito en LATAM</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SERVICIO 1 ===== -->
+<div id="p-svc1" class="page">
+  <div class="section-hero svc-hero-bg">
+    <div class="sec-hero-content">
+      <p class="eyebrow">Consultoría E&G</p>
+      <h2 class="sec-h">Campañas electorales</h2>
+      <div class="gold-bar"></div>
+      <p class="sec-p">Tu ruta a la victoria, diseñada con datos — no con suposiciones. Combinamos estrategia política tradicional con inteligencia artificial para que cada decisión de tu campaña esté respaldada por evidencia.</p>
+
+      <div class="crs-meta">
+        <div class="crs-meta-item"><i class="ti ti-calendar"></i><p>Según duración de campaña</p><span>Alcance</span></div>
+        <div class="crs-meta-item"><i class="ti ti-map-pin"></i><p>Presencial + remoto</p><span>Modalidad</span></div>
+        <div class="crs-meta-item"><i class="ti ti-users-group"></i><p>Equipo dedicado E&G</p><span>Incluye</span></div>
+      </div>
+
+      <div class="crs-block">
+        <h3>¿Qué incluye?</h3>
+        <div class="crs-acc-item">
+          <div class="crs-acc-head" onclick="toggleAcc(this)"><div class="acc-label"><i class="ti ti-clipboard-list"></i>Diseño integral de campaña electoral</div><i class="ti ti-chevron-down"></i></div>
+          <div class="crs-acc-body"><p>Estrategia general, objetivos, etapas, narrativa, cronograma y plan de acción completo, adaptado a tu candidatura.</p></div>
+        </div>
+        <div class="crs-acc-item">
+          <div class="crs-acc-head" onclick="toggleAcc(this)"><div class="acc-label"><i class="ti ti-stethoscope"></i>Diagnóstico político-electoral</div><i class="ti ti-chevron-down"></i></div>
+          <div class="crs-acc-body"><p>Análisis del candidato, territorio, competencia, fortalezas, debilidades y oportunidades reales.</p></div>
+        </div>
+        <div class="crs-acc-item">
+          <div class="crs-acc-head" onclick="toggleAcc(this)"><div class="acc-label"><i class="ti ti-chart-bar"></i>Investigación electoral y estudios de opinión</div><i class="ti ti-chevron-down"></i></div>
+          <div class="crs-acc-body"><p>Encuestas, focus groups, entrevistas y análisis de percepción ciudadana para decidir con datos.</p></div>
+        </div>
+        <div class="crs-acc-item">
+          <div class="crs-acc-head" onclick="toggleAcc(this)"><div class="acc-label"><i class="ti ti-map-2"></i>Estrategia territorial (campaña de tierra)</div><i class="ti ti-chevron-down"></i></div>
+          <div class="crs-acc-body"><p>Organización de bases, caminatas, visitas casa por casa, comités y brigadas en territorio.</p></div>
+        </div>
+        <div class="crs-acc-item">
+          <div class="crs-acc-head" onclick="toggleAcc(this)"><div class="acc-label"><i class="ti ti-shield-check"></i>War room electoral</div><i class="ti ti-chevron-down"></i></div>
+          <div class="crs-acc-body"><p>Monitoreo diario, respuesta rápida, control de crisis y toma de decisiones estratégicas en tiempo real.</p></div>
+        </div>
+        <div class="crs-acc-item">
+          <div class="crs-acc-head" onclick="toggleAcc(this)"><div class="acc-label"><i class="ti ti-file-text"></i>Plan de gobierno y propuestas electorales</div><i class="ti ti-chevron-down"></i></div>
+          <div class="crs-acc-body"><p>Propuestas realistas, mensajes programáticos y ejes de campaña que conectan con el elector.</p></div>
+        </div>
+        <p style="color:var(--gray);font-size:12px;margin-top:.75rem;font-style:italic">Cada servicio se adapta a tu campaña — en la consulta definimos el alcance exacto.</p>
+      </div>
+
+      <div class="crs-block">
+        <h3>Cómo trabajamos</h3>
+        <div class="crs-timeline">
+          <div class="crs-tl-item"><div class="crs-tl-num">1</div><h4>Diagnóstico</h4><p>Analizamos el escenario, territorio y competencia.</p></div>
+          <div class="crs-tl-item"><div class="crs-tl-num">2</div><h4>Estrategia</h4><p>Diseñamos el plan de campaña y narrativa central.</p></div>
+          <div class="crs-tl-item"><div class="crs-tl-num">3</div><h4>Implementación</h4><p>Desplegamos war room, equipo territorial y herramientas digitales.</p></div>
+          <div class="crs-tl-item"><div class="crs-tl-num">4</div><h4>Optimización continua</h4><p>Ajustamos en tiempo real según resultados.</p></div>
+        </div>
+      </div>
+
+      <div class="crs-block">
+        <h3>¿Para quién es?</h3>
+        <p class="sec-p" style="margin-bottom:0">Candidatos a alcaldías, gobiernos regionales, congreso y presidencia que buscan una campaña profesional, basada en datos y con tecnología de punta.</p>
+      </div>
+
+      <div class="svc-cta">
+        <h3>¿Listo para diseñar tu ruta a la victoria?</h3>
+        <p>Agenda una consulta estratégica gratuita y descubre cómo E&G puede potenciar tu campaña.</p>
+        <button class="btn-gold" style="padding:13px 32px;font-size:13px" onclick="nav('contacto')">Agenda tu consulta estratégica</button>
+        <p class="svc-proof">9 campañas ganadas en 3 países de LATAM</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SERVICIO 2 ===== -->
+<div id="p-svc2" class="page">
+  <div class="section-hero" style="background:linear-gradient(rgba(3,17,31,0.85),rgba(3,17,31,0.85)),url('fondo-svc2.jpg') center/cover no-repeat">
+    <div class="sec-hero-content">
+      <p class="eyebrow">Consultoría E&G</p>
+      <h2 class="sec-h">Imagen electoral y gubernamental</h2>
+      <div class="gold-bar"></div>
+      <p class="sec-p">Construimos la identidad que conecta con el votante: mensaje, narrativa y presencia pública de alto impacto. Tu imagen no es casualidad — es estrategia.</p>
+
+      <div class="crs-meta">
+        <div class="crs-meta-item"><i class="ti ti-user-circle"></i><p>Personal o institucional</p><span>Alcance</span></div>
+        <div class="crs-meta-item"><i class="ti ti-map-pin"></i><p>Presencial + remoto</p><span>Modalidad</span></div>
+        <div class="crs-meta-item"><i class="ti ti-users-group"></i><p>Equipo dedicado E&G</p><span>Incluye</span></div>
+      </div>
+
+      <div class="crs-block">
+        <h3>¿Qué incluye?</h3>
+        <div class="crs-acc-item">
+          <div class="crs-acc-head" onclick="toggleAcc(this)"><div class="acc-label"><i class="ti ti-user-circle"></i>Construcción de imagen pública</div><i class="ti ti-chevron-down"></i></div>
+          <div class="crs-acc-body"><p>Definimos estilo, personalidad política, atributos y diferenciación frente a otros candidatos o autoridades.</p></div>
+        </div>
+        <div class="crs-acc-item">
+          <div class="crs-acc-head" onclick="toggleAcc(this)"><div class="acc-label"><i class="ti ti-target-arrow"></i>Posicionamiento político personal</div><i class="ti ti-chevron-down"></i></div>
+          <div class="crs-acc-body"><p>Convertimos al candidato o autoridad en una figura reconocible, confiable y competitiva ante su público.</p></div>
+        </div>
+        <div class="crs-acc-item">
+          <div class="crs-acc-head" onclick="toggleAcc(this)"><div class="acc-label"><i class="ti ti-microphone-2"></i>Asesoría de discurso político</div><i class="ti ti-chevron-down"></i></div>
+          <div class="crs-acc-body"><p>Mensajes centrales, frases fuerza, respuestas públicas para entrevistas y presentaciones.</p></div>
+        </div>
+        <div class="crs-acc-item">
+          <div class="crs-acc-head" onclick="toggleAcc(this)"><div class="acc-label"><i class="ti ti-broadcast"></i>Media training</div><i class="ti ti-chevron-down"></i></div>
+          <div class="crs-acc-body"><p>Preparación para entrevistas en radio, televisión, prensa, debates y transmisiones en vivo.</p></div>
+        </div>
+        <div class="crs-acc-item">
+          <div class="crs-acc-head" onclick="toggleAcc(this)"><div class="acc-label"><i class="ti ti-shield-check"></i>Gestión de reputación pública</div><i class="ti ti-chevron-down"></i></div>
+          <div class="crs-acc-body"><p>Prevención y manejo de críticas, ataques, denuncias, rumores o desgaste político.</p></div>
+        </div>
+        <div class="crs-acc-item">
+          <div class="crs-acc-head" onclick="toggleAcc(this)"><div class="acc-label"><i class="ti ti-speakerphone"></i>Estrategia de vocería</div><i class="ti ti-chevron-down"></i></div>
+          <div class="crs-acc-body"><p>Definimos quién habla, cuándo habla, cómo responde y con qué tono ante cada audiencia.</p></div>
+        </div>
+        <p style="color:var(--gray);font-size:12px;margin-top:.75rem;font-style:italic">Cada servicio se adapta a tu perfil — en la consulta definimos el alcance exacto.</p>
+      </div>
+
+      <div class="crs-block">
+        <h3>Cómo trabajamos</h3>
+        <div class="crs-timeline">
+          <div class="crs-tl-item"><div class="crs-tl-num">1</div><h4>Diagnóstico de imagen</h4><p>Evaluamos tu imagen actual, percepción pública y puntos de mejora.</p></div>
+          <div class="crs-tl-item"><div class="crs-tl-num">2</div><h4>Diseño de posicionamiento</h4><p>Definimos mensaje, narrativa y estilo de comunicación.</p></div>
+          <div class="crs-tl-item"><div class="crs-tl-num">3</div><h4>Entrenamiento y vocería</h4><p>Media training y preparación para escenarios públicos.</p></div>
+          <div class="crs-tl-item"><div class="crs-tl-num">4</div><h4>Monitoreo continuo</h4><p>Seguimos tu imagen pública y ajustamos la estrategia.</p></div>
+        </div>
+      </div>
+
+      <div class="crs-block">
+        <h3>¿Para quién es?</h3>
+        <p class="sec-p" style="margin-bottom:0">Candidatos, autoridades en funciones y funcionarios públicos que necesitan fortalecer su imagen, posicionamiento y presencia ante medios y ciudadanía.</p>
+      </div>
+
+      <div class="svc-cta">
+        <h3>¿Listo para construir tu imagen política?</h3>
+        <p>Agenda una consulta estratégica gratuita y descubre cómo E&G puede potenciar tu presencia pública.</p>
+        <button class="btn-gold" style="padding:13px 32px;font-size:13px" onclick="nav('contacto')">Agenda tu consulta estratégica</button>
+        <p class="svc-proof">9 campañas ganadas en 3 países de LATAM</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- ===== LAB ===== -->
 <div id="p-lab" class="page">
   <div class="section-hero" id="lab-hero">
@@ -971,8 +1221,8 @@ footer{background:#020C16;padding:3.5rem 3rem 1.5rem;border-top:0.5px solid rgba
       <p class="sec-p">Libros, manuales y e-books producidos por el Laboratorio. Material oficial de los programas E&G.</p>
       <div class="lib-grid">
         <div class="lib-card"><div class="lib-top"><i class="ti ti-book"></i></div><div class="lib-body"><p class="lib-title" style="cursor:pointer" onclick="nav('lib1')">Manual de IA para campañas electorales</p><p class="lib-desc">Guía práctica para integrar IA en cada etapa de la campaña.</p><div class="lib-footer"><span class="lib-price">USD 25</span><button class="lib-btn" onclick="nav('lib1')">Más información</button></div></div></div>
-        <div class="lib-card"><div class="lib-top"><i class="ti ti-book"></i></div><div class="lib-body"><p class="lib-title">Estrategia territorial E&G</p><p class="lib-desc">Metodología para análisis y planificación en campañas municipales y regionales.</p><div class="lib-footer"><span class="lib-price">USD 18</span><button class="lib-btn" onclick="addToCart('lib2','Estrategia territorial E&G',18)">Comprar</button></div></div></div>
-        <div class="lib-card"><div class="lib-top"><i class="ti ti-book"></i></div><div class="lib-body"><p class="lib-title">Comunicación política digital</p><p class="lib-desc">Redes, bots, contenido y pauta digital para campañas modernas en LATAM.</p><div class="lib-footer"><span class="lib-price">USD 18</span><button class="lib-btn" onclick="addToCart('lib3','Comunicación política digital',18)">Comprar</button></div></div></div>
+        <div class="lib-card"><div class="lib-top"><i class="ti ti-book"></i></div><div class="lib-body"><p class="lib-title" style="cursor:pointer" onclick="nav('lib2')">Estrategia territorial E&G</p><p class="lib-desc">Metodología para análisis y planificación en campañas municipales y regionales.</p><div class="lib-footer"><span class="lib-price">USD 18</span><button class="lib-btn" onclick="nav('lib2')">Más información</button></div></div></div>
+        <div class="lib-card"><div class="lib-top"><i class="ti ti-book"></i></div><div class="lib-body"><p class="lib-title" style="cursor:pointer" onclick="nav('lib3')">Comunicación política digital</p><p class="lib-desc">Redes, bots, contenido y pauta digital para campañas modernas en LATAM.</p><div class="lib-footer"><span class="lib-price">USD 18</span><button class="lib-btn" onclick="nav('lib3')">Más información</button></div></div></div>
       </div>
     </div>
   </div>
