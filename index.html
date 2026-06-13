@@ -41,7 +41,7 @@ nav{background:rgba(3,17,31,0.97);backdrop-filter:blur(12px);border-bottom:0.5px
 .menubar{border-top:0.5px solid rgba(255,255,255,0.04);display:flex;align-items:center}
 .menu-item{font-size:13px;color:var(--gray);padding:14px 16px;cursor:pointer;letter-spacing:0.04em;transition:all .2s;position:relative;display:flex;align-items:center;gap:4px;border-bottom:2px solid transparent;white-space:nowrap}
 .menu-item:hover,.menu-item.active-m{color:var(--gold);border-bottom-color:var(--gold)}
-.dropdown{display:none;position:fixed;top:calc(100% + 1px);left:0;background:rgba(3,17,31,0.98);backdrop-filter:blur(16px);border:1.5px solid rgba(212,175,55,0.9);border-radius:6px;margin-left:12px;box-shadow:0 0 8px rgba(212,175,55,0.6),0 0 16px rgba(212,175,55,0.3),0 20px 40px rgba(0,0,0,0.5);min-width:230px;z-index:400;padding:6px 0;box-shadow:0 20px 40px rgba(0,0,0,0.5)}
+.dropdown{display:none;position:fixed;top:calc(100% + 1px);left:0;background:rgba(3,17,31,0.98);backdrop-filter:blur(16px);border:1.5px solid rgba(212,175,55,0.9);border-radius:6px;margin-left:12px;box-shadow:0 0 8px rgba(212,175,55,0.6),0 0 16px rgba(212,175,55,0.3),0 20px 40px rgba(0,0,0,0.5);min-width:230px;z-index:400;padding:6px 0}
 .menu-item:hover .dropdown{display:block}
 .dd-item{display:block;padding:10px 18px;font-size:11px;color:var(--gray);text-decoration:none;cursor:pointer;letter-spacing:0.03em;transition:all .15s}
 .dd-item:hover{color:var(--gold);background:rgba(212,175,55,0.05);padding-left:22px}
@@ -94,7 +94,7 @@ nav{background:rgba(3,17,31,0.97);backdrop-filter:blur(12px);border-bottom:0.5px
 @media(max-width:768px){.btn-gold,.btn-outline{font-size:11px;padding:10px 14px}}
 .titulo-mobile{display:none}
 @media(max-width:768px){.titulo-mobile{display:block}.titulo-desktop{display:none}}
-@media(max-width:768px){.hero{background:linear-gradient(135deg,rgba(2,12,24,0.97) 0%,rgba(7,26,45,0.97) 40%,rgba(10,35,64,0.97) 70%,rgba(3,17,31,0.97) 100%),url('fondo.jpg') center/cover no-repeat}}
+@media(max-width:768px){.hero{background:linear-gradient(135deg,rgba(2,12,24,0.90) 0%,rgba(7,26,45,0.90) 40%,rgba(10,35,64,0.90) 70%,rgba(3,17,31,0.90) 100%),url('fondo.jpg') center/cover no-repeat}}
 .sec-h em{color:var(--gold);font-style:normal}
 .sec-p{font-size:13px;color:var(--gray);line-height:1.85;max-width:520px;margin-bottom:2.5rem;font-weight:300}
 .gold-bar{width:44px;height:1.5px;background:linear-gradient(90deg,var(--gold),var(--gold-soft));margin-bottom:2rem}
@@ -124,6 +124,59 @@ nav{background:rgba(3,17,31,0.97);backdrop-filter:blur(12px);border-bottom:0.5px
 .course-price{font-size:13px;color:var(--gold);font-weight:500}
 .course-btn{font-size:9px;color:var(--black);background:var(--gold);padding:6px 12px;border-radius:3px;cursor:pointer;font-weight:500;border:none;font-family:var(--fb);transition:all .2s}
 .course-btn:hover{background:var(--gold-light)}
+.crs-video{aspect-ratio:16/9;background:linear-gradient(135deg,var(--navy-light),var(--navy-dark));border-radius:8px;display:flex;align-items:center;justify-content:center;cursor:pointer;border:0.5px solid rgba(212,175,55,0.2);margin:1.5rem 0}
+.crs-video i{font-size:52px;color:var(--gold)}
+.crs-grid2{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin:2rem 0}
+.crs-block{margin-bottom:1.5rem}
+.crs-block h3{font-family:'Georgia',serif;color:var(--white-pure);font-size:18px;font-weight:500;margin-bottom:.75rem}
+.crs-list{list-style:none;padding:0}
+.crs-list li{display:flex;gap:10px;color:var(--gray);font-size:13px;line-height:1.6;margin-bottom:.6rem;align-items:flex-start}
+.crs-list i{color:var(--gold);font-size:16px;margin-top:1px;flex-shrink:0}
+.crs-module{border:0.5px solid rgba(212,175,55,0.15);border-radius:6px;padding:.85rem 1.1rem;margin-bottom:.6rem;color:var(--white-pure);font-size:13px;font-weight:500}
+.crs-module span{color:var(--gold);margin-right:8px}
+.crs-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.5rem 0}
+.crs-meta-item{text-align:center;border:0.5px solid rgba(212,175,55,0.15);border-radius:6px;padding:1rem .5rem}
+.crs-meta-item i{color:var(--gold);font-size:22px;margin-bottom:6px;display:block}
+.crs-meta-item p{color:var(--white-pure);font-size:12px;font-weight:500}
+.crs-meta-item span{color:var(--gray);font-size:11px}
+.crs-instr{display:flex;gap:1rem;align-items:center;border:0.5px solid rgba(212,175,55,0.15);border-radius:8px;padding:1.25rem;margin:1.5rem 0}
+.crs-instr-pic{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold-light));flex-shrink:0;display:flex;align-items:center;justify-content:center;color:var(--black);font-family:'Georgia',serif;font-size:22px;font-weight:700}
+.crs-instr h4{color:var(--white-pure);font-size:14px;margin-bottom:3px}
+.crs-instr p{color:var(--gray);font-size:12px;line-height:1.5}
+.crs-price-box{border:0.5px solid rgba(212,175,55,0.25);border-radius:8px;padding:1.5rem;text-align:center;background:rgba(212,175,55,0.04);margin-top:2rem}
+.crs-price-box .price{font-family:'Georgia',serif;color:var(--gold);font-size:32px;font-weight:700;margin-bottom:4px}
+.crs-price-box .sub{color:var(--gray);font-size:12px;margin-bottom:1rem}
+@media(max-width:768px){.crs-grid2{grid-template-columns:1fr}.crs-meta{grid-template-columns:1fr}}
+.lib-detail{display:grid;grid-template-columns:280px 1fr;gap:2.5rem;align-items:start}
+.lib-cover{position:sticky;top:100px}
+.lib-cover-img{aspect-ratio:3/4;background:linear-gradient(135deg,var(--navy-light),var(--navy-dark));border:0.5px solid rgba(212,175,55,0.25);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem}
+.lib-cover-img i{font-size:64px;color:var(--gold)}
+.lib-meta-row{display:flex;justify-content:space-between;color:var(--gray);font-size:11px;padding:6px 0;border-bottom:0.5px solid rgba(255,255,255,0.06)}
+.lib-meta-row span{color:var(--white-pure);font-weight:500}
+@media(max-width:768px){.lib-detail{grid-template-columns:1fr}.lib-cover{position:static;max-width:200px;margin:0 auto 1.5rem}}
+.crs-timeline{position:relative;padding-left:42px;margin-top:1.5rem}
+.crs-timeline::before{content:'';position:absolute;left:13px;top:6px;bottom:6px;width:2px;background:linear-gradient(to bottom,var(--gold),rgba(212,175,55,0.1))}
+.crs-tl-item{position:relative;margin-bottom:1.75rem}
+.crs-tl-num{position:absolute;left:-42px;top:0;width:28px;height:28px;border-radius:50%;background:var(--navy-dark);border:1.5px solid var(--gold);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;font-family:var(--fb)}
+.crs-tl-item h4{color:var(--white-pure);font-size:14px;font-weight:600;margin-bottom:4px}
+.crs-tl-item p{color:var(--gray);font-size:12px;line-height:1.5;margin:0}
+.crs-icongrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:1.5rem}
+.crs-icon-item{text-align:center;border:0.5px solid rgba(212,175,55,0.15);border-radius:6px;padding:1.1rem .5rem}
+.crs-icon-item i{color:var(--gold);font-size:24px;margin-bottom:8px;display:block}
+.crs-icon-item p{color:var(--white-pure);font-size:12px;font-weight:500;margin:0}
+.crs-acc-item{border:0.5px solid rgba(212,175,55,0.15);border-radius:6px;margin-bottom:.6rem;overflow:hidden}
+.crs-acc-head{padding:.85rem 1.1rem;display:flex;justify-content:space-between;align-items:center;cursor:pointer;color:var(--white-pure);font-size:13px;font-weight:500}
+.crs-acc-head span{color:var(--gold);margin-right:8px}
+.crs-acc-head i{color:var(--gold);transition:transform .2s;flex-shrink:0}
+.crs-acc-body{max-height:0;overflow:hidden;transition:max-height .25s}
+.crs-acc-body p{padding:0 1.1rem 1rem;color:var(--gray);font-size:12px;line-height:1.6;margin:0}
+.crs-acc-item.open .crs-acc-body{max-height:120px}
+.crs-acc-item.open .crs-acc-head i{transform:rotate(180deg)}
+@media(max-width:768px){.crs-icongrid{grid-template-columns:1fr 1fr}}
+.crs-agenda-item{display:flex;gap:1rem;align-items:flex-start;padding:.75rem 0;border-bottom:0.5px solid rgba(255,255,255,0.06)}
+.crs-agenda-item:last-child{border-bottom:none}
+.crs-agenda-time{color:var(--gold);font-size:12px;font-weight:700;font-family:var(--fb);min-width:54px;flex-shrink:0}
+.crs-agenda-item p{color:var(--gray);font-size:13px;line-height:1.5;margin:0}
 
 /* LABORATORIO */
 .lab-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
@@ -156,7 +209,25 @@ nav{background:rgba(3,17,31,0.97);backdrop-filter:blur(12px);border-bottom:0.5px
 .lib-footer{display:flex;justify-content:space-between;align-items:center}
 .lib-price{font-size:13px;color:var(--gold);font-weight:500}
 .lib-btn{font-size:10px;color:var(--black);background:var(--gold);padding:4px 10px;border-radius:3px;cursor:pointer;font-weight:500;border:none;font-family:var(--fb)}
-
+.cart-icon{position:relative;cursor:pointer;color:var(--white-pure);font-size:20px;display:flex;align-items:center;margin-right:14px}
+.cart-badge{position:absolute;top:-8px;right:-10px;background:var(--gold);color:var(--black);font-size:10px;font-weight:700;border-radius:50%;width:18px;height:18px;display:none;align-items:center;justify-content:center;font-family:var(--fb)}
+.cart-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.5);opacity:0;pointer-events:none;transition:opacity .25s;z-index:998}
+.cart-overlay.open{opacity:1;pointer-events:all}
+.cart-drawer{position:fixed;top:0;right:0;height:100vh;width:360px;max-width:78vw;background:var(--navy-dark);border-left:0.5px solid rgba(212,175,55,0.2);z-index:999;transform:translateX(100%);transition:transform .3s;display:flex;flex-direction:column}
+.cart-drawer.open{transform:translateX(0)}
+.cart-header{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 1.5rem;border-bottom:0.5px solid rgba(212,175,55,0.15)}
+.cart-header h3{color:var(--white-pure);font-family:'Georgia',serif;font-size:18px;font-weight:500}
+.cart-header i{cursor:pointer;color:var(--gray);font-size:20px}
+.cart-items{flex:1;overflow-y:auto;padding:1rem 1.5rem}
+.cart-item{display:flex;justify-content:space-between;align-items:center;padding:.75rem 0;border-bottom:0.5px solid rgba(255,255,255,0.06)}
+.ci-name{color:var(--white-pure);font-size:12px;font-weight:500;margin-bottom:3px;max-width:180px}
+.ci-price{color:var(--gold);font-size:11px}
+.ci-qty{display:flex;align-items:center;gap:8px}
+.ci-qty button{background:rgba(212,175,55,0.12);border:none;color:var(--gold);width:22px;height:22px;border-radius:4px;cursor:pointer;font-size:14px;line-height:1}
+.ci-qty span{color:var(--white-pure);font-size:12px;min-width:14px;text-align:center}
+.cart-footer{padding:1.25rem 1.5rem;border-top:0.5px solid rgba(212,175,55,0.15)}
+.cart-total{color:var(--white-pure);font-size:14px;font-weight:600;margin-bottom:.85rem;display:flex;justify-content:space-between}
+.cart-total span{color:var(--gold)}
 /* BLOG */
 .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .blog-card{border:0.5px solid rgba(212,175,55,0.12);border-radius:8px;overflow:hidden;background:linear-gradient(135deg,var(--navy-light),var(--navy-dark));transition:all .2s;cursor:pointer}
@@ -397,6 +468,7 @@ footer{background:#020C16;padding:3.5rem 3rem 1.5rem;border-top:0.5px solid rgba
       </div>
     </a>
     <div class="nav-actions">
+      <div class="cart-icon" onclick="toggleCart()"><i class="ti ti-shopping-cart" style="font-size:22px;color:var(--gold)"></i><span class="cart-badge" id="cart-badge">0</span></div>
       <div class="nav-campus" onclick="nav('escuela')">Campus E&G</div>
       <button class="nav-cta" onclick="nav('contacto')">Agenda una consulta</button>
     </div>
@@ -482,10 +554,10 @@ footer{background:#020C16;padding:3.5rem 3rem 1.5rem;border-top:0.5px solid rgba
       <div class="gold-bar"></div>
       <p class="sec-p">Cursos diseñados por consultores activos, con herramientas de IA reales y metodología probada en campañas. Desde cualquier país, a tu ritmo.</p>
       <div class="courses-grid">
-        <div class="course-card"><div class="course-top"><img src="curso1.png" alt="IA campañas"/></div><div class="course-body"><p class="course-level">Programa intensivo · 10–12 semanas</p><h4 class="course-title">IA aplicada a campañas electorales</h4><p class="course-desc">Domina las herramientas de IA que están cambiando las campañas: bots, war room digital y análisis de datos. Incluye manual exclusivo E&G.</p><div class="course-footer"><span class="course-price">USD 183 · Acceso de por vida</span><button class="course-btn" onclick="nav('contacto')">Inscribirme</button></div></div></div>
-        <div class="course-card"><div class="course-top"><img src="curso2.png" alt="Estrategia electoral"/></div><div class="course-body"><p class="course-level">Curso completo · 6–8 semanas</p><h4 class="course-title">Estrategia electoral y posicionamiento</h4><p class="course-desc">Aprende a diseñar una campaña ganadora desde cero: análisis de escenario, mapa territorial y estrategia de posicionamiento.</p><div class="course-footer"><span class="course-price">USD 105 · Incluye material exclusivo</span><button class="course-btn" onclick="nav('contacto')">Inscribirme</button></div></div></div>
-        <div class="course-card"><div class="course-top"><img src="curso3.png" alt="Comunicación política"/></div><div class="course-body"><p class="course-level">Curso completo · 6–8 semanas</p><h4 class="course-title">Comunicación política y oratoria</h4><p class="course-desc">Habla con poder y convence en cualquier escenario: debates, medios, redes y narrativa pública con casos reales de LATAM.</p><div class="course-footer"><span class="course-price">USD 105 · Incluye material exclusivo</span><button class="course-btn" onclick="nav('contacto')">Inscribirme</button></div></div></div>
-        <div class="course-card"><div class="course-top"><img src="curso4.png" alt="Liderazgo político"/></div><div class="course-body"><p class="course-level">Masterclass · 1 sesión</p><h4 class="course-title">Liderazgo político y gestión pública</h4><p class="course-desc">Para alcaldes, regidores y funcionarios que quieren liderar con impacto y consolidar su posición institucional.</p><div class="course-footer"><span class="course-price">USD 25 · Acceso inmediato</span><button class="course-btn" onclick="nav('contacto')">Inscribirme</button></div></div></div>
+        <div class="course-card"><div class="course-top"><img src="curso1.png" alt="IA campañas"/></div><div class="course-body"><p class="course-level">Programa intensivo · 10–12 semanas</p><h4 class="course-title" style="cursor:pointer" onclick="nav('curso1')">IA aplicada a campañas electorales</h4><p class="course-desc">Domina las herramientas de IA que están cambiando las campañas: bots, war room digital y análisis de datos. Incluye manual exclusivo E&G.</p><div class="course-footer"><span class="course-price">USD 183 · Acceso de por vida</span><button class="course-btn" onclick="nav('curso1')">Más información</button></div></div></div>
+        <div class="course-card"><div class="course-top"><img src="curso2.png" alt="Estrategia electoral"/></div><div class="course-body"><p class="course-level">Curso completo · 6–8 semanas</p><h4 class="course-title" style="cursor:pointer" onclick="nav('curso2')">Estrategia electoral y posicionamiento</h4><p class="course-desc">Aprende a diseñar una campaña ganadora desde cero: análisis de escenario, mapa territorial y estrategia de posicionamiento.</p><div class="course-footer"><span class="course-price">USD 105 · Incluye material exclusivo</span><button class="course-btn" onclick="nav('curso2')">Más información</button></div></div></div>
+        <div class="course-card"><div class="course-top"><img src="curso3.png" alt="Comunicación política"/></div><div class="course-body"><p class="course-level">Curso completo · 6–8 semanas</p><h4 class="course-title" style="cursor:pointer" onclick="nav('curso3')">Comunicación política y oratoria</h4><p class="course-desc">Habla con poder y convence en cualquier escenario: debates, medios, redes y narrativa pública con casos reales de LATAM.</p><div class="course-footer"><span class="course-price">USD 105 · Incluye material exclusivo</span><button class="course-btn" onclick="nav('curso3')">Más información</button></div></div></div>
+        <div class="course-card"><div class="course-top"><img src="curso4.png" alt="Liderazgo político"/></div><div class="course-body"><p class="course-level">Masterclass · 1 sesión</p><h4 class="course-title" style="cursor:pointer" onclick="nav('curso4')">Liderazgo político y gestión pública</h4><p class="course-desc">Para alcaldes, regidores y funcionarios que quieren liderar con impacto y consolidar su posición institucional.</p><div class="course-footer"><span class="course-price">USD 25 · Acceso inmediato</span><button class="course-btn" onclick="nav('curso4')">Más información</button></div></div></div>
       </div>
       <div style="text-align:center;margin-top:2rem"><button class="btn-gold" onclick="nav('escuela')">Explorar todos los programas →</button></div>
     </div>
@@ -548,6 +620,310 @@ footer{background:#020C16;padding:3.5rem 3rem 1.5rem;border-top:0.5px solid rgba
   </div>
 </div>
 
+<!-- ===== CURSO 1 ===== -->
+<div id="p-curso1" class="page">
+  <div class="section-hero">
+    <div class="sec-hero-content">
+      <p class="eyebrow">Escuela E&G · Curso insignia</p>
+      <h2 class="sec-h">IA aplicada a campañas electorales</h2>
+      <div class="gold-bar"></div>
+      <p class="sec-p">El programa más completo de E&G: domina las herramientas de inteligencia artificial que ya están definiendo el resultado de las campañas en LATAM.</p>
+
+      <div class="crs-video" onclick="alert('Video próximamente')"><i class="ti ti-player-play"></i></div>
+
+      <div class="crs-meta">
+        <div class="crs-meta-item"><i class="ti ti-clock"></i><p>10–12 semanas</p><span>Duración</span></div>
+        <div class="crs-meta-item"><i class="ti ti-video"></i><p>Online · Zoom en vivo</p><span>Modalidad</span></div>
+        <div class="crs-meta-item"><i class="ti ti-infinity"></i><p>Acceso de por vida</p><span>A grabaciones</span></div>
+      </div>
+
+      <div class="crs-grid2">
+        <div class="crs-block">
+          <h3>¿Qué aprenderás?</h3>
+          <ul class="crs-list">
+            <li><i class="ti ti-check"></i>Usar IA (Claude, ChatGPT) para análisis de discurso, propuestas y mensajes de campaña</li>
+            <li><i class="ti ti-check"></i>Construir y operar bots de WhatsApp para movilización de votantes</li>
+            <li><i class="ti ti-check"></i>Implementar un war room digital con monitoreo de datos en tiempo real</li>
+            <li><i class="ti ti-check"></i>Analizar resultados electorales históricos para predecir comportamiento de voto</li>
+            <li><i class="ti ti-check"></i>Aplicar la metodología propia del Laboratorio E&G en una campaña real</li>
+          </ul>
+        </div>
+        <div class="crs-block">
+          <h3>Temario</h3>
+          <div class="crs-module"><span>01</span>Fundamentos de IA para estrategia política</div>
+          <div class="crs-module"><span>02</span>Análisis de datos electorales con IA</div>
+          <div class="crs-module"><span>03</span>Bots de WhatsApp: diseño y automatización</div>
+          <div class="crs-module"><span>04</span>War room digital: monitoreo y toma de decisiones</div>
+          <div class="crs-module"><span>05</span>Proyecto final: aplica todo a un caso real</div>
+        </div>
+      </div>
+
+      <div class="crs-block">
+        <h3>¿A quién va dirigido?</h3>
+        <p class="sec-p" style="margin-bottom:0">Candidatos, asesores políticos, jefes de campaña y consultores que quieran integrar IA en su estrategia electoral.</p>
+      </div>
+
+      <div class="crs-instr">
+        <div class="crs-instr-pic">JB</div>
+        <div>
+          <h4>Jhino Barreto Ramírez</h4>
+          <p>Fundador de E&G · Politólogo (UNMSM) · 9 campañas en 3 países · +5 años de experiencia</p>
+        </div>
+      </div>
+
+      <div class="crs-price-box">
+        <div class="price">USD 183</div>
+        <div class="sub">Acceso de por vida · Incluye manual exclusivo E&G · Certificado de finalización</div>
+        <button class="btn-gold" style="padding:13px 32px;font-size:13px" onclick="addToCart('curso1','IA aplicada a campañas electorales',183)">Acceder</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== CURSO 2 ===== -->
+<div id="p-curso2" class="page">
+  <div class="section-hero">
+    <div class="sec-hero-content">
+      <p class="eyebrow">Escuela E&G</p>
+      <h2 class="sec-h">Estrategia electoral y posicionamiento</h2>
+      <div class="gold-bar"></div>
+      <p class="sec-p">Diseña una campaña ganadora desde cero: del análisis de escenario al posicionamiento que conecta con el electorado.</p>
+
+      <div class="crs-video" onclick="alert('Video próximamente')"><i class="ti ti-player-play"></i></div>
+
+      <div class="crs-meta">
+        <div class="crs-meta-item"><i class="ti ti-clock"></i><p>6–8 semanas</p><span>Duración</span></div>
+        <div class="crs-meta-item"><i class="ti ti-video"></i><p>Online · Zoom en vivo</p><span>Modalidad</span></div>
+        <div class="crs-meta-item"><i class="ti ti-file-text"></i><p>Material exclusivo</p><span>Incluye</span></div>
+      </div>
+
+      <div class="crs-grid2">
+        <div class="crs-block">
+          <h3>¿Qué aprenderás?</h3>
+          <ul class="crs-list">
+            <li><i class="ti ti-check"></i>Analizar el escenario electoral: actores, fuerzas y oportunidades</li>
+            <li><i class="ti ti-check"></i>Construir un mapa territorial para identificar zonas clave</li>
+            <li><i class="ti ti-check"></i>Definir el posicionamiento y mensaje central de campaña</li>
+            <li><i class="ti ti-check"></i>Diseñar la estrategia de comunicación según cada segmento de votantes</li>
+            <li><i class="ti ti-check"></i>Aplicar la metodología E&G usada en campañas reales</li>
+          </ul>
+        </div>
+        <div class="crs-block">
+          <h3>¿A quién va dirigido?</h3>
+          <p class="sec-p" style="margin-bottom:0">Candidatos, jefes de campaña y consultores que necesitan estructurar una estrategia electoral completa desde el inicio.</p>
+        </div>
+      </div>
+
+      <div class="crs-block">
+        <h3>Temario</h3>
+        <div class="crs-timeline">
+          <div class="crs-tl-item"><div class="crs-tl-num">1</div><h4>Diagnóstico y análisis de escenario electoral</h4><p>Identifica actores, fuerzas políticas y el contexto en el que se moverá tu campaña.</p></div>
+          <div class="crs-tl-item"><div class="crs-tl-num">2</div><h4>Mapeo territorial y segmentación de votantes</h4><p>Localiza zonas de oportunidad y perfila a los distintos grupos de electores.</p></div>
+          <div class="crs-tl-item"><div class="crs-tl-num">3</div><h4>Definición de posicionamiento y mensaje central</h4><p>Construye el mensaje que diferenciará a tu candidato del resto.</p></div>
+          <div class="crs-tl-item"><div class="crs-tl-num">4</div><h4>Estrategia de comunicación multicanal</h4><p>Lleva tu mensaje a cada canal: redes, prensa, territorio y WhatsApp.</p></div>
+          <div class="crs-tl-item"><div class="crs-tl-num">5</div><h4>Plan de campaña integrado (proyecto final)</h4><p>Integra todo lo aprendido en un plan de campaña aplicable a un caso real.</p></div>
+        </div>
+      </div>
+
+      <div class="crs-instr">
+        <div class="crs-instr-pic">JB</div>
+        <div>
+          <h4>Jhino Barreto Ramírez</h4>
+          <p>Fundador de E&G · Politólogo (UNMSM) · 9 campañas en 3 países · +5 años de experiencia</p>
+        </div>
+      </div>
+
+      <div class="crs-price-box">
+        <div class="price">USD 105</div>
+        <div class="sub">Incluye material exclusivo · Certificado de finalización</div>
+        <button class="btn-gold" style="padding:13px 32px;font-size:13px" onclick="addToCart('curso2','Estrategia electoral y posicionamiento',105)">Acceder</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== CURSO 3 ===== -->
+<div id="p-curso3" class="page">
+  <div class="section-hero">
+    <div class="sec-hero-content">
+      <p class="eyebrow">Escuela E&G</p>
+      <h2 class="sec-h">Comunicación política y oratoria</h2>
+      <div class="gold-bar"></div>
+      <p class="sec-p">Habla con poder, convence con propósito. Domina la comunicación que conecta con la ciudadanía en cualquier escenario.</p>
+
+      <div class="crs-video" onclick="alert('Video próximamente')"><i class="ti ti-player-play"></i></div>
+
+      <div class="crs-meta">
+        <div class="crs-meta-item"><i class="ti ti-clock"></i><p>6–8 semanas</p><span>Duración</span></div>
+        <div class="crs-meta-item"><i class="ti ti-video"></i><p>Online · Zoom en vivo</p><span>Modalidad</span></div>
+        <div class="crs-meta-item"><i class="ti ti-file-text"></i><p>Material exclusivo</p><span>Incluye</span></div>
+      </div>
+
+      <div class="crs-block">
+        <h3>¿Qué aprenderás?</h3>
+        <div class="crs-icongrid">
+          <div class="crs-icon-item"><i class="ti ti-microphone-2"></i><p>Oratoria y dicción para escenarios públicos</p></div>
+          <div class="crs-icon-item"><i class="ti ti-broadcast"></i><p>Manejo de medios y entrevistas</p></div>
+          <div class="crs-icon-item"><i class="ti ti-share"></i><p>Comunicación en redes sociales</p></div>
+          <div class="crs-icon-item"><i class="ti ti-swords"></i><p>Debates: técnicas y manejo de presión</p></div>
+          <div class="crs-icon-item"><i class="ti ti-book-2"></i><p>Storytelling político</p></div>
+          <div class="crs-icon-item"><i class="ti ti-world"></i><p>Casos reales de LATAM</p></div>
+        </div>
+      </div>
+
+      <div class="crs-block">
+        <h3>Temario</h3>
+        <div class="crs-acc-item">
+          <div class="crs-acc-head" onclick="toggleAcc(this)"><div><span>01</span>Fundamentos de oratoria política</div><i class="ti ti-chevron-down"></i></div>
+          <div class="crs-acc-body"><p>Técnicas de voz, dicción, postura y presencia para hablar con autoridad ante cualquier público.</p></div>
+        </div>
+        <div class="crs-acc-item">
+          <div class="crs-acc-head" onclick="toggleAcc(this)"><div><span>02</span>Comunicación en medios tradicionales</div><i class="ti ti-chevron-down"></i></div>
+          <div class="crs-acc-body"><p>Cómo prepararte para entrevistas de radio, TV y prensa, manejando preguntas difíciles con seguridad.</p></div>
+        </div>
+        <div class="crs-acc-item">
+          <div class="crs-acc-head" onclick="toggleAcc(this)"><div><span>03</span>Estrategia de comunicación digital y redes</div><i class="ti ti-chevron-down"></i></div>
+          <div class="crs-acc-body"><p>Define tu voz en redes sociales y construye contenido que conecta con cada audiencia.</p></div>
+        </div>
+        <div class="crs-acc-item">
+          <div class="crs-acc-head" onclick="toggleAcc(this)"><div><span>04</span>Debates: preparación y manejo de crisis</div><i class="ti ti-chevron-down"></i></div>
+          <div class="crs-acc-body"><p>Técnicas para preparar argumentos, responder ataques y mantener el control en momentos de presión.</p></div>
+        </div>
+        <div class="crs-acc-item">
+          <div class="crs-acc-head" onclick="toggleAcc(this)"><div><span>05</span>Construcción de narrativa personal (proyecto final)</div><i class="ti ti-chevron-down"></i></div>
+          <div class="crs-acc-body"><p>Desarrolla tu propia historia y mensaje de marca personal, aplicándolo a un caso real.</p></div>
+        </div>
+      </div>
+
+      <div class="crs-block">
+        <h3>¿A quién va dirigido?</h3>
+        <p class="sec-p" style="margin-bottom:0">Candidatos, voceros, funcionarios públicos y equipos de comunicación que necesiten fortalecer su presencia pública.</p>
+      </div>
+
+      <div class="crs-instr">
+        <div class="crs-instr-pic">JB</div>
+        <div>
+          <h4>Jhino Barreto Ramírez</h4>
+          <p>Fundador de E&G · Politólogo (UNMSM) · 9 campañas en 3 países · +5 años de experiencia</p>
+        </div>
+      </div>
+
+      <div class="crs-price-box">
+        <div class="price">USD 105</div>
+        <div class="sub">Incluye material exclusivo · Certificado de finalización</div>
+        <button class="btn-gold" style="padding:13px 32px;font-size:13px" onclick="addToCart('curso3','Comunicación política y oratoria',105)">Acceder</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== CURSO 4 ===== -->
+<div id="p-curso4" class="page">
+  <div class="section-hero">
+    <div class="sec-hero-content">
+      <p class="eyebrow">Masterclass E&G</p>
+      <h2 class="sec-h">Liderazgo político y gestión pública</h2>
+      <div class="gold-bar"></div>
+      <p class="sec-p">Una sesión intensiva para autoridades y líderes que necesitan resultados desde el primer día de gestión.</p>
+
+      <div class="crs-video" onclick="alert('Video próximamente')"><i class="ti ti-player-play"></i></div>
+
+      <div class="crs-meta">
+        <div class="crs-meta-item"><i class="ti ti-clock"></i><p>1 sesión en vivo</p><span>2.5 horas</span></div>
+        <div class="crs-meta-item"><i class="ti ti-video"></i><p>Online · Zoom en vivo</p><span>Modalidad</span></div>
+        <div class="crs-meta-item"><i class="ti ti-certificate"></i><p>Certificado digital</p><span>Incluye</span></div>
+      </div>
+
+      <div class="crs-block">
+        <h3>¿Qué aprenderás?</h3>
+        <div class="crs-icongrid">
+          <div class="crs-icon-item"><i class="ti ti-crown"></i><p>Liderazgo efectivo en entornos de presión política</p></div>
+          <div class="crs-icon-item"><i class="ti ti-users"></i><p>Gestión y motivación de equipos de trabajo</p></div>
+          <div class="crs-icon-item"><i class="ti ti-scale"></i><p>Toma de decisiones estratégicas bajo incertidumbre</p></div>
+          <div class="crs-icon-item"><i class="ti ti-speakerphone"></i><p>Comunicación con stakeholders y ciudadanía</p></div>
+        </div>
+      </div>
+
+      <div class="crs-block">
+        <h3>Agenda de la sesión</h3>
+        <div class="crs-agenda-item"><div class="crs-agenda-time">00:00</div><p>Bienvenida y diagnóstico de liderazgo</p></div>
+        <div class="crs-agenda-item"><div class="crs-agenda-time">00:20</div><p>Liderazgo en gestión pública: casos reales</p></div>
+        <div class="crs-agenda-item"><div class="crs-agenda-time">01:00</div><p>Gestión de equipos y delegación efectiva</p></div>
+        <div class="crs-agenda-item"><div class="crs-agenda-time">01:40</div><p>Toma de decisiones bajo presión (taller práctico)</p></div>
+        <div class="crs-agenda-item"><div class="crs-agenda-time">02:15</div><p>Cierre, preguntas y plan de acción personal</p></div>
+      </div>
+
+      <div class="crs-block">
+        <h3>¿A quién va dirigido?</h3>
+        <p class="sec-p" style="margin-bottom:0">Alcaldes, regidores, funcionarios públicos y líderes de equipos que buscan fortalecer su liderazgo institucional.</p>
+      </div>
+
+      <div class="crs-instr">
+        <div class="crs-instr-pic">JB</div>
+        <div>
+          <h4>Jhino Barreto Ramírez</h4>
+          <p>Fundador de E&G · Politólogo (UNMSM) · 9 campañas en 3 países · +5 años de experiencia</p>
+        </div>
+      </div>
+
+      <div class="crs-price-box">
+        <div class="price">USD 25</div>
+        <div class="sub">Acceso inmediato · Certificado digital de participación</div>
+        <button class="btn-gold" style="padding:13px 32px;font-size:13px" onclick="addToCart('curso4','Liderazgo político y gestión pública',25)">Acceder</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== LIBRO 1 ===== -->
+<div id="p-lib1" class="page">
+  <div class="section-hero">
+    <div class="sec-hero-content">
+      <p class="eyebrow">Librería E&G</p>
+      <h2 class="sec-h">Manual de IA para campañas electorales</h2>
+      <div class="gold-bar"></div>
+      <p class="sec-p">Guía práctica para integrar inteligencia artificial en cada etapa de tu campaña — sin necesidad de programar.</p>
+
+      <div class="lib-detail">
+        <div class="lib-cover">
+          <div class="lib-cover-img"><i class="ti ti-book"></i></div>
+          <div class="lib-meta-row"><span>Formato</span>PDF descargable</div>
+          <div class="lib-meta-row"><span>Páginas</span>45</div>
+          <div class="lib-meta-row"><span>Idioma</span>Español</div>
+          <div class="crs-price-box" style="margin-top:1.25rem">
+            <div class="price">USD 25</div>
+            <div class="sub">Acceso inmediato tras compra</div>
+            <button class="btn-gold" style="width:100%;padding:13px;font-size:13px" onclick="addToCart('lib1','Manual de IA para campañas electorales',25)">Comprar</button>
+          </div>
+        </div>
+        <div>
+          <div class="crs-block">
+            <h3>De qué trata</h3>
+            <p class="sec-p" style="margin-bottom:0">Este manual condensa la metodología que E&G usa en campañas reales: cómo usar herramientas de IA (Claude, ChatGPT) para escribir discursos, analizar electores, automatizar bots de WhatsApp y montar un war room digital. Todo explicado paso a paso, con prompts y plantillas listas para usar.</p>
+          </div>
+          <div class="crs-block">
+            <h3>¿Por qué te conviene?</h3>
+            <ul class="crs-list">
+              <li><i class="ti ti-check"></i>Ahorra semanas de prueba y error con prompts ya probados en campañas</li>
+              <li><i class="ti ti-check"></i>Aplica IA sin conocimientos técnicos previos</li>
+              <li><i class="ti ti-check"></i>Incluye plantillas editables (Word/PDF) listas para tu equipo</li>
+              <li><i class="ti ti-check"></i>Metodología validada en 9 campañas reales en 3 países</li>
+            </ul>
+          </div>
+          <div class="crs-block">
+            <h3>Contenido</h3>
+            <div class="crs-module"><span>01</span>Introducción a la IA en campañas políticas</div>
+            <div class="crs-module"><span>02</span>Prompts para discursos y propuestas</div>
+            <div class="crs-module"><span>03</span>Bots de WhatsApp paso a paso</div>
+            <div class="crs-module"><span>04</span>War room digital con IA</div>
+            <div class="crs-module"><span>05</span>Plantillas y recursos descargables</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- ===== LAB ===== -->
 <div id="p-lab" class="page">
   <div class="section-hero" id="lab-hero">
@@ -576,10 +952,10 @@ footer{background:#020C16;padding:3.5rem 3rem 1.5rem;border-top:0.5px solid rgba
       <div class="gold-bar"></div>
       <p class="sec-p">Programas con metodología propia, certificado digital y manuales exclusivos. Acceso desde cualquier país de Latinoamérica.</p>
       <div class="courses-grid">
-        <div class="course-card"><div class="course-top"><img src="curso1.png" alt="IA campañas"/></div><div class="course-body"><p class="course-level">Programa intensivo · 10–12 semanas</p><h4 class="course-title">IA aplicada a campañas electorales</h4><p class="course-desc">Claude, ChatGPT, análisis de datos, bots y war room. Manual del Laboratorio E&G incluido.</p><div class="course-footer"><span class="course-price">USD 183 · Acceso de por vida</span><button class="course-btn" onclick="nav('contacto')">Inscribirme</button></div></div></div>
-        <div class="course-card"><div class="course-top"><img src="curso2.png" alt="Estrategia electoral"/></div><div class="course-body"><p class="course-level">Curso completo · 6–8 semanas</p><h4 class="course-title">Estrategia electoral y posicionamiento</h4><p class="course-desc">Metodología E&G para campañas ganadoras. Análisis de escenario y estrategia territorial.</p><div class="course-footer"><span class="course-price">USD 105 · Incluye material exclusivo</span><button class="course-btn" onclick="nav('contacto')">Inscribirme</button></div></div></div>
-        <div class="course-card"><div class="course-top"><img src="curso3.png" alt="Comunicación política"/></div><div class="course-body"><p class="course-level">Curso completo · 6–8 semanas</p><h4 class="course-title">Comunicación política y oratoria</h4><p class="course-desc">Debates, medios, redes sociales y narrativa pública con casos reales de LATAM.</p><div class="course-footer"><span class="course-price">USD 105 · Incluye material exclusivo</span><button class="course-btn" onclick="nav('contacto')">Inscribirme</button></div></div></div>
-        <div class="course-card"><div class="course-top"><img src="curso4.png" alt="Liderazgo político"/></div><div class="course-body"><p class="course-level">Masterclass · 1 sesión</p><h4 class="course-title">Liderazgo político y gestión pública</h4><p class="course-desc">Para autoridades y líderes. Posición institucional, equipos y toma de decisiones estratégicas.</p><div class="course-footer"><span class="course-price">USD 25 · Acceso inmediato</span><button class="course-btn" onclick="nav('contacto')">Inscribirme</button></div></div></div>
+        <div class="course-card"><div class="course-top"><img src="curso1.png" alt="IA campañas"/></div><div class="course-body"><p class="course-level">Programa intensivo · 10–12 semanas</p><h4 class="course-title" style="cursor:pointer" onclick="nav('curso1')">IA aplicada a campañas electorales</h4><p class="course-desc">Claude, ChatGPT, análisis de datos, bots y war room. Manual del Laboratorio E&G incluido.</p><div class="course-footer"><span class="course-price">USD 183 · Acceso de por vida</span><button class="course-btn" onclick="nav('curso1')">Más información</button></div></div></div>
+        <div class="course-card"><div class="course-top"><img src="curso2.png" alt="Estrategia electoral"/></div><div class="course-body"><p class="course-level">Curso completo · 6–8 semanas</p><h4 class="course-title" style="cursor:pointer" onclick="nav('curso2')">Estrategia electoral y posicionamiento</h4><p class="course-desc">Metodología E&G para campañas ganadoras. Análisis de escenario y estrategia territorial.</p><div class="course-footer"><span class="course-price">USD 105 · Incluye material exclusivo</span><button class="course-btn" onclick="nav('curso2')">Más información</button></div></div></div>
+        <div class="course-card"><div class="course-top"><img src="curso3.png" alt="Comunicación política"/></div><div class="course-body"><p class="course-level">Curso completo · 6–8 semanas</p><h4 class="course-title" style="cursor:pointer" onclick="nav('curso3')">Comunicación política y oratoria</h4><p class="course-desc">Debates, medios, redes sociales y narrativa pública con casos reales de LATAM.</p><div class="course-footer"><span class="course-price">USD 105 · Incluye material exclusivo</span><button class="course-btn" onclick="nav('curso3')">Más información</button></div></div></div>
+        <div class="course-card"><div class="course-top"><img src="curso4.png" alt="Liderazgo político"/></div><div class="course-body"><p class="course-level">Masterclass · 1 sesión</p><h4 class="course-title" style="cursor:pointer" onclick="nav('curso4')">Liderazgo político y gestión pública</h4><p class="course-desc">Para autoridades y líderes. Posición institucional, equipos y toma de decisiones estratégicas.</p><div class="course-footer"><span class="course-price">USD 25 · Acceso inmediato</span><button class="course-btn" onclick="nav('curso4')">Más información</button></div></div></div>
       </div>
     </div>
   </div>
@@ -594,9 +970,9 @@ footer{background:#020C16;padding:3.5rem 3rem 1.5rem;border-top:0.5px solid rgba
       <div class="gold-bar"></div>
       <p class="sec-p">Libros, manuales y e-books producidos por el Laboratorio. Material oficial de los programas E&G.</p>
       <div class="lib-grid">
-        <div class="lib-card"><div class="lib-top"><i class="ti ti-book"></i></div><div class="lib-body"><p class="lib-title">Manual de IA para campañas electorales</p><p class="lib-desc">Guía práctica para integrar IA en cada etapa de la campaña.</p><div class="lib-footer"><span class="lib-price">USD 25</span><button class="lib-btn">Comprar</button></div></div></div>
-        <div class="lib-card"><div class="lib-top"><i class="ti ti-book"></i></div><div class="lib-body"><p class="lib-title">Estrategia territorial E&G</p><p class="lib-desc">Metodología para análisis y planificación en campañas municipales y regionales.</p><div class="lib-footer"><span class="lib-price">USD 18</span><button class="lib-btn">Comprar</button></div></div></div>
-        <div class="lib-card"><div class="lib-top"><i class="ti ti-book"></i></div><div class="lib-body"><p class="lib-title">Comunicación política digital</p><p class="lib-desc">Redes, bots, contenido y pauta digital para campañas modernas en LATAM.</p><div class="lib-footer"><span class="lib-price">USD 18</span><button class="lib-btn">Comprar</button></div></div></div>
+        <div class="lib-card"><div class="lib-top"><i class="ti ti-book"></i></div><div class="lib-body"><p class="lib-title" style="cursor:pointer" onclick="nav('lib1')">Manual de IA para campañas electorales</p><p class="lib-desc">Guía práctica para integrar IA en cada etapa de la campaña.</p><div class="lib-footer"><span class="lib-price">USD 25</span><button class="lib-btn" onclick="nav('lib1')">Más información</button></div></div></div>
+        <div class="lib-card"><div class="lib-top"><i class="ti ti-book"></i></div><div class="lib-body"><p class="lib-title">Estrategia territorial E&G</p><p class="lib-desc">Metodología para análisis y planificación en campañas municipales y regionales.</p><div class="lib-footer"><span class="lib-price">USD 18</span><button class="lib-btn" onclick="addToCart('lib2','Estrategia territorial E&G',18)">Comprar</button></div></div></div>
+        <div class="lib-card"><div class="lib-top"><i class="ti ti-book"></i></div><div class="lib-body"><p class="lib-title">Comunicación política digital</p><p class="lib-desc">Redes, bots, contenido y pauta digital para campañas modernas en LATAM.</p><div class="lib-footer"><span class="lib-price">USD 18</span><button class="lib-btn" onclick="addToCart('lib3','Comunicación política digital',18)">Comprar</button></div></div></div>
       </div>
     </div>
   </div>
@@ -809,5 +1185,73 @@ function enviarConsulta(){
 }
 </script>
 
+<script>
+let cart=JSON.parse(localStorage.getItem('eg_cart')||'[]');
+function saveCart(){localStorage.setItem('eg_cart',JSON.stringify(cart));renderCart();}
+function addToCart(id,name,price){
+  const item=cart.find(i=>i.id===id);
+  if(item)item.qty++;else cart.push({id:id,name:name,price:price,qty:1});
+  saveCart();
+  toggleCart(true);
+}
+function changeQty(id,delta){
+  const item=cart.find(i=>i.id===id);
+  if(!item)return;
+  item.qty+=delta;
+  if(item.qty<=0)cart=cart.filter(i=>i.id!==id);
+  saveCart();
+}
+function renderCart(){
+  const cont=document.getElementById('cart-items');
+  const badge=document.getElementById('cart-badge');
+  const totalEl=document.getElementById('cart-total');
+  if(!cont||!badge||!totalEl)return;
+  let total=0,count=0;
+  cont.innerHTML='';
+  if(cart.length===0){cont.innerHTML='<p style="color:var(--gray);font-size:13px;text-align:center;padding:2rem 0">Tu carrito está vacío</p>';}
+  cart.forEach(i=>{
+    total+=i.price*i.qty;count+=i.qty;
+    cont.innerHTML+='<div class="cart-item"><div><p class="ci-name">'+i.name+'</p><p class="ci-price">USD '+i.price+'</p></div><div class="ci-qty"><button onclick="changeQty(\''+i.id+'\',-1)">−</button><span>'+i.qty+'</span><button onclick="changeQty(\''+i.id+'\',1)">+</button></div></div>';
+  });
+  totalEl.textContent='USD '+total;
+  badge.textContent=count;
+  badge.style.display=count>0?'flex':'none';
+}
+function toggleAcc(el){
+  el.parentElement.classList.toggle('open');
+}
+function toggleCart(forceOpen){
+  const drawer=document.getElementById('cart-drawer');
+  const overlay=document.getElementById('cart-overlay');
+  const open=forceOpen===true||!drawer.classList.contains('open');
+  drawer.classList.toggle('open',open);
+  overlay.classList.toggle('open',open);
+}
+function checkoutCart(){
+  if(cart.length===0){alert('Tu carrito está vacío');return;}
+  let txt='Hola, quiero comprar lo siguiente en E%26G:%0A%0A';
+  let total=0;
+  cart.forEach(function(i){
+    txt+='- '+encodeURIComponent(i.name)+' x'+i.qty+' (USD '+(i.price*i.qty)+')%0A';
+    total+=i.price*i.qty;
+  });
+  txt+='%0ATotal: USD '+total;
+  window.open('https://wa.me/51918078776?text='+txt,'_blank');
+  cart=[];
+  saveCart();
+  toggleCart(false);
+}
+renderCart();
+</script>
+
+<div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
+<div class="cart-drawer" id="cart-drawer">
+  <div class="cart-header"><h3>Tu carrito</h3><i class="ti ti-x" onclick="toggleCart()"></i></div>
+  <div class="cart-items" id="cart-items"></div>
+  <div class="cart-footer">
+    <div class="cart-total">Total <span id="cart-total">USD 0</span></div>
+    <button class="btn-gold" style="width:100%;padding:13px;font-size:13px" onclick="checkoutCart()">Finalizar compra por WhatsApp</button>
+  </div>
+</div>
 </body>
 </html>
