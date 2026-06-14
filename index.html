@@ -188,6 +188,14 @@ nav{background:rgba(3,17,31,0.97);backdrop-filter:blur(12px);border-bottom:0.5px
 .svc-cta h3{color:var(--white-pure);font-family:'Georgia',serif;font-size:20px;font-weight:500;margin-bottom:.5rem}
 .svc-cta p{color:var(--gray);font-size:13px;margin-bottom:1.25rem}
 .svc-proof{color:var(--gold);font-size:12px;font-weight:600;text-align:center;margin-top:.5rem}
+.svc-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.5rem 0}
+.svc-stat{text-align:center;border:0.5px solid rgba(212,175,55,0.2);border-radius:6px;padding:1rem .5rem;background:rgba(212,175,55,0.03)}
+.svc-stat i{color:var(--gold);font-size:22px;margin-bottom:6px;display:block}
+.svc-stat p{color:var(--white-pure);font-size:12px;font-weight:600;margin:0}
+.svc-usecase{border-left:2px solid var(--gold);padding:.6rem 0 .6rem 1rem;margin-bottom:.75rem;color:var(--gray);font-size:13px;line-height:1.5}
+.svc-why{border:0.5px solid rgba(212,175,55,0.2);border-radius:8px;padding:1.25rem;background:rgba(212,175,55,0.03);color:var(--gray);font-size:13px;line-height:1.6}
+.svc-why strong{color:var(--gold)}
+@media(max-width:768px){.svc-stats{grid-template-columns:1fr}}
 .svc-hero-bg{background:linear-gradient(rgba(3,17,31,0.85),rgba(3,17,31,0.85)),url('fondo.jpg') center/cover no-repeat}
 .crs-acc-head .acc-label{display:flex;align-items:center;gap:10px}
 .crs-acc-head .acc-label i{color:var(--gold);font-size:16px;flex-shrink:0}
@@ -308,7 +316,7 @@ footer{background:#020C16;padding:3.5rem 3rem 1.5rem;border-top:0.5px solid rgba
 .fb-logo em{color:var(--gold);font-style:normal}
 .footer-brand p{font-size:11px;color:var(--gray-dark);line-height:1.7;margin-bottom:1.25rem;font-weight:300}
 .footer-social{display:flex;gap:8px}
-.social-btn{width:30px;height:30px;border:0.5px solid rgba(212,175,55,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .2s}
+.social-btn{width:30px;height:30px;border:0.5px solid rgba(212,175,55,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .2s;color:var(--gray-dark);text-decoration:none}
 .social-btn:hover{border-color:var(--gold);background:rgba(212,175,55,0.08)}
 .social-btn i{font-size:13px;color:var(--gray-dark);transition:color .2s}
 .social-btn:hover i{color:var(--gold)}
@@ -493,8 +501,8 @@ footer{background:#020C16;padding:3.5rem 3rem 1.5rem;border-top:0.5px solid rgba
       <div class="dropdown">
         <span class="dd-item" onclick="event.stopPropagation();nav('svc1')">Campañas electorales</span>
         <span class="dd-item" onclick="event.stopPropagation();nav('svc2')">Imagen electoral y gubernamental</span>
-        <span class="dd-item" onclick="event.stopPropagation();nav('servicios')">Marketing político digital</span>
-        <span class="dd-item" onclick="event.stopPropagation();nav('servicios')">Comunicación institucional</span>
+        <span class="dd-item" onclick="event.stopPropagation();nav('svc3')">Marketing político digital</span>
+        <span class="dd-item" onclick="event.stopPropagation();nav('svc4')">Comunicación institucional</span>
         <span class="dd-item" onclick="event.stopPropagation();nav('lab')">Laboratorio de IA política</span>
       </div>
     </div>
@@ -553,9 +561,9 @@ footer{background:#020C16;padding:3.5rem 3rem 1.5rem;border-top:0.5px solid rgba
       <div class="svc-grid">
         <div class="svc-card" onclick="nav('svc1')"><div class="svc-deco"></div><div class="svc-content"><i class="ti ti-trophy svc-icon"></i><h3 class="svc-title">Campañas electorales</h3><p class="svc-desc">Diseñamos tu ruta a la victoria: diagnóstico territorial, estrategia de campaña y ejecución con IA en cada etapa.</p><div class="svc-link">Ver más <i class="ti ti-arrow-right"></i></div></div></div>
         <div class="svc-card" onclick="nav('svc2')"><div class="svc-deco"></div><div class="svc-content"><i class="ti ti-user-star svc-icon"></i><h3 class="svc-title">Imagen electoral y gubernamental</h3><p class="svc-desc">Construimos la identidad que conecta con el votante: mensaje, narrativa y presencia pública de alto impacto.</p><div class="svc-link">Ver más <i class="ti ti-arrow-right"></i></div></div></div>
-        <div class="svc-card" onclick="nav('servicios')"><div class="svc-deco"></div><div class="svc-content"><i class="ti ti-device-mobile svc-icon"></i><h3 class="svc-title">Marketing político digital</h3><p class="svc-desc">Presencia digital total: redes, pauta segmentada, contenido político y bots de WhatsApp automatizados.</p><div class="svc-link">Ver más <i class="ti ti-arrow-right"></i></div></div></div>
+        <div class="svc-card" onclick="nav('svc3')"><div class="svc-deco"></div><div class="svc-content"><i class="ti ti-device-mobile svc-icon"></i><h3 class="svc-title">Marketing político digital</h3><p class="svc-desc">Presencia digital total: redes, pauta segmentada, contenido político y bots de WhatsApp automatizados.</p><div class="svc-link">Ver más <i class="ti ti-arrow-right"></i></div></div></div>
         <div class="svc-card" onclick="nav('lab')"><div class="svc-deco"></div><div class="svc-content"><i class="ti ti-flask svc-icon"></i><h3 class="svc-title">Laboratorio de IA política</h3><p class="svc-desc">Tecnología política de vanguardia: war room digital, mapeo de votantes y modelos predictivos con IA.</p><div class="svc-link">Ver más <i class="ti ti-arrow-right"></i></div></div></div>
-        <div class="svc-card" onclick="nav('servicios')"><div class="svc-deco"></div><div class="svc-content"><i class="ti ti-speakerphone svc-icon"></i><h3 class="svc-title">Comunicación institucional</h3><p class="svc-desc">Gestión de imagen para autoridades en función: comunicación, crisis y posicionamiento institucional.</p><div class="svc-link">Ver más <i class="ti ti-arrow-right"></i></div></div></div>
+        <div class="svc-card" onclick="nav('svc4')"><div class="svc-deco"></div><div class="svc-content"><i class="ti ti-speakerphone svc-icon"></i><h3 class="svc-title">Comunicación institucional</h3><p class="svc-desc">Gestión de imagen para autoridades en función: comunicación, crisis y posicionamiento institucional.</p><div class="svc-link">Ver más <i class="ti ti-arrow-right"></i></div></div></div>
         <div class="svc-card" onclick="nav('contacto')" style="border-color:rgba(212,175,55,0.3)"><div class="svc-content" style="justify-content:center;align-items:center;text-align:center"><i class="ti ti-calendar svc-icon"></i><h3 class="svc-title">Consulta estratégica inicial</h3><p class="svc-desc">Diagnóstico sin costo. Propuesta en 48 horas.</p><div class="svc-link" style="justify-content:center">Agendar ahora <i class="ti ti-arrow-right"></i></div></div></div>
       </div>
     </div>
@@ -1107,7 +1115,7 @@ footer{background:#020C16;padding:3.5rem 3rem 1.5rem;border-top:0.5px solid rgba
 
 <!-- ===== SERVICIO 2 ===== -->
 <div id="p-svc2" class="page">
-  <div class="section-hero" style="background:linear-gradient(rgba(3,17,31,0.85),rgba(3,17,31,0.85)),url('fondo-svc2.jpg') center/cover no-repeat">
+  <div class="section-hero">
     <div class="sec-hero-content">
       <p class="eyebrow">Consultoría E&G</p>
       <h2 class="sec-h">Imagen electoral y gubernamental</h2>
@@ -1167,6 +1175,166 @@ footer{background:#020C16;padding:3.5rem 3rem 1.5rem;border-top:0.5px solid rgba
       <div class="svc-cta">
         <h3>¿Listo para construir tu imagen política?</h3>
         <p>Agenda una consulta estratégica gratuita y descubre cómo E&G puede potenciar tu presencia pública.</p>
+        <button class="btn-gold" style="padding:13px 32px;font-size:13px" onclick="nav('contacto')">Agenda tu consulta estratégica</button>
+        <p class="svc-proof">9 campañas ganadas en 3 países de LATAM</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SERVICIO 3 ===== -->
+<div id="p-svc3" class="page">
+  <div class="section-hero">
+    <div class="sec-hero-content">
+      <p class="eyebrow">Consultoría E&G</p>
+      <h2 class="sec-h">Marketing político digital</h2>
+      <div class="gold-bar"></div>
+      <p class="sec-p">Presencia digital total: donde está tu electorado, ahí estamos nosotros — con contenido, pauta y automatización con IA.</p>
+
+      <div class="crs-meta">
+        <div class="crs-meta-item"><i class="ti ti-apps"></i><p>Multicanal</p><span>Alcance</span></div>
+        <div class="crs-meta-item"><i class="ti ti-video"></i><p>Online</p><span>Modalidad</span></div>
+        <div class="crs-meta-item"><i class="ti ti-users-group"></i><p>Equipo dedicado E&G</p><span>Incluye</span></div>
+      </div>
+
+      <div class="crs-block">
+        <h3>¿Qué incluye?</h3>
+        <div class="crs-acc-item">
+          <div class="crs-acc-head" onclick="toggleAcc(this)"><div class="acc-label"><i class="ti ti-target-arrow"></i>Estrategia digital de campaña</div><i class="ti ti-chevron-down"></i></div>
+          <div class="crs-acc-body"><p>Plan integral para Facebook, Instagram, TikTok, WhatsApp y YouTube, adaptado a tu electorado.</p></div>
+        </div>
+        <div class="crs-acc-item">
+          <div class="crs-acc-head" onclick="toggleAcc(this)"><div class="acc-label"><i class="ti ti-share"></i>Gestión de redes sociales políticas</div><i class="ti ti-chevron-down"></i></div>
+          <div class="crs-acc-body"><p>Administración de páginas, publicación de contenido, respuestas y monitoreo continuo.</p></div>
+        </div>
+        <div class="crs-acc-item">
+          <div class="crs-acc-head" onclick="toggleAcc(this)"><div class="acc-label"><i class="ti ti-ad"></i>Publicidad política digital</div><i class="ti ti-chevron-down"></i></div>
+          <div class="crs-acc-body"><p>Campañas pagadas en Meta Ads, TikTok Ads, YouTube Ads y Google Ads, segmentadas por audiencia.</p></div>
+        </div>
+        <div class="crs-acc-item">
+          <div class="crs-acc-head" onclick="toggleAcc(this)"><div class="acc-label"><i class="ti ti-brand-whatsapp"></i>Automatización de WhatsApp Business</div><i class="ti ti-chevron-down"></i></div>
+          <div class="crs-acc-body"><p>Bot de respuestas, captación de simpatizantes, registro de voluntarios y atención ciudadana 24/7.</p></div>
+        </div>
+        <div class="crs-acc-item">
+          <div class="crs-acc-head" onclick="toggleAcc(this)"><div class="acc-label"><i class="ti ti-movie"></i>Producción de videos políticos con IA</div><i class="ti ti-chevron-down"></i></div>
+          <div class="crs-acc-body"><p>Guiones, imágenes, videos, subtítulos y piezas audiovisuales producidas con velocidad y calidad.</p></div>
+        </div>
+        <div class="crs-acc-item">
+          <div class="crs-acc-head" onclick="toggleAcc(this)"><div class="acc-label"><i class="ti ti-eye"></i>Monitoreo de redes y escucha social</div><i class="ti ti-chevron-down"></i></div>
+          <div class="crs-acc-body"><p>Seguimiento de comentarios, tendencias, ataques y percepción ciudadana en tiempo real.</p></div>
+        </div>
+        <p style="color:var(--gray);font-size:12px;margin-top:.75rem;font-style:italic">Cada servicio se adapta a tu campaña — en la consulta definimos el alcance exacto.</p>
+      </div>
+
+      <div class="crs-block">
+        <h3>Cómo trabajamos</h3>
+        <div class="crs-timeline">
+          <div class="crs-tl-item"><div class="crs-tl-num">1</div><h4>Auditoría digital</h4><p>Analizamos tu presencia actual en redes y oportunidades de crecimiento.</p></div>
+          <div class="crs-tl-item"><div class="crs-tl-num">2</div><h4>Estrategia de contenido</h4><p>Definimos línea editorial, tono y calendario de publicaciones.</p></div>
+          <div class="crs-tl-item"><div class="crs-tl-num">3</div><h4>Producción y pauta</h4><p>Creamos contenido y activamos campañas pagadas segmentadas.</p></div>
+          <div class="crs-tl-item"><div class="crs-tl-num">4</div><h4>Optimización con IA</h4><p>Medimos resultados y ajustamos la estrategia en tiempo real.</p></div>
+        </div>
+      </div>
+
+      <div class="crs-block">
+        <h3>¿Para quién es?</h3>
+        <p class="sec-p" style="margin-bottom:0">Candidatos y equipos de campaña que necesitan presencia digital profesional, automatizada y basada en datos.</p>
+      </div>
+
+      <div class="svc-cta">
+        <h3>¿Listo para activar tu campaña digital?</h3>
+        <p>Agenda una consulta estratégica gratuita y descubre cómo E&G puede potenciar tu presencia digital.</p>
+        <button class="btn-gold" style="padding:13px 32px;font-size:13px" onclick="nav('contacto')">Agenda tu consulta estratégica</button>
+        <p class="svc-proof">9 campañas ganadas en 3 países de LATAM</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SERVICIO 4 ===== -->
+<div id="p-svc4" class="page">
+  <div class="section-hero">
+    <div class="sec-hero-content">
+      <p class="eyebrow">Consultoría E&G</p>
+      <h2 class="sec-h">Comunicación institucional</h2>
+      <div class="gold-bar"></div>
+      <p class="sec-p">Para gobiernos y entidades en gestión: convierte tu trabajo diario en confianza ciudadana, con comunicación clara, profesional y estratégica.</p>
+
+      <div class="svc-stats">
+        <div class="svc-stat"><i class="ti ti-heart-handshake"></i><p>Confianza ciudadana</p></div>
+        <div class="svc-stat"><i class="ti ti-clock-hour-4"></i><p>Comunicación 24/7</p></div>
+        <div class="svc-stat"><i class="ti ti-report"></i><p>Reportes mensuales</p></div>
+      </div>
+
+      <div class="crs-meta">
+        <div class="crs-meta-item"><i class="ti ti-building-bank"></i><p>Institucional</p><span>Alcance</span></div>
+        <div class="crs-meta-item"><i class="ti ti-map-pin"></i><p>Presencial + remoto</p><span>Modalidad</span></div>
+        <div class="crs-meta-item"><i class="ti ti-users-group"></i><p>Equipo dedicado E&G</p><span>Incluye</span></div>
+      </div>
+
+      <div class="crs-block">
+        <h3>¿Qué incluye?</h3>
+        <div class="crs-acc-item">
+          <div class="crs-acc-head" onclick="toggleAcc(this)"><div class="acc-label"><i class="ti ti-clipboard-list"></i>Plan de comunicación institucional</div><i class="ti ti-chevron-down"></i></div>
+          <div class="crs-acc-body"><p>Estrategia general para comunicar gestión, obras, servicios y resultados de forma ordenada.</p></div>
+        </div>
+        <div class="crs-acc-item">
+          <div class="crs-acc-head" onclick="toggleAcc(this)"><div class="acc-label"><i class="ti ti-building-community"></i>Comunicación de gestión pública</div><i class="ti ti-chevron-down"></i></div>
+          <div class="crs-acc-body"><p>Convertimos acciones municipales o gubernamentales en mensajes claros para la ciudadanía.</p></div>
+        </div>
+        <div class="crs-acc-item">
+          <div class="crs-acc-head" onclick="toggleAcc(this)"><div class="acc-label"><i class="ti ti-news"></i>Gestión de prensa</div><i class="ti ti-chevron-down"></i></div>
+          <div class="crs-acc-body"><p>Notas de prensa, comunicados, entrevistas, ruedas de prensa y cobertura mediática.</p></div>
+        </div>
+        <div class="crs-acc-item">
+          <div class="crs-acc-head" onclick="toggleAcc(this)"><div class="acc-label"><i class="ti ti-alert-triangle"></i>Comunicación de crisis</div><i class="ti ti-chevron-down"></i></div>
+          <div class="crs-acc-body"><p>Respuesta ante conflictos sociales, denuncias, emergencias, críticas o problemas de gestión.</p></div>
+        </div>
+        <div class="crs-acc-item">
+          <div class="crs-acc-head" onclick="toggleAcc(this)"><div class="acc-label"><i class="ti ti-handshake"></i>Relaciones públicas institucionales</div><i class="ti ti-chevron-down"></i></div>
+          <div class="crs-acc-body"><p>Vínculo con medios, organizaciones sociales, líderes vecinales, gremios y actores estratégicos.</p></div>
+        </div>
+        <div class="crs-acc-item">
+          <div class="crs-acc-head" onclick="toggleAcc(this)"><div class="acc-label"><i class="ti ti-users"></i>Comunicación interna</div><i class="ti ti-chevron-down"></i></div>
+          <div class="crs-acc-body"><p>Mejoramos la coordinación entre áreas, funcionarios, trabajadores y voceros institucionales.</p></div>
+        </div>
+        <div class="crs-acc-item">
+          <div class="crs-acc-head" onclick="toggleAcc(this)"><div class="acc-label"><i class="ti ti-file-report"></i>Informe de logros y rendición de cuentas</div><i class="ti ti-chevron-down"></i></div>
+          <div class="crs-acc-body"><p>Reportes de gestión, memorias, balances y presentaciones para la ciudadanía.</p></div>
+        </div>
+        <p style="color:var(--gray);font-size:12px;margin-top:.75rem;font-style:italic">Cada servicio se adapta a tu institución — en la consulta definimos el alcance exacto.</p>
+      </div>
+
+      <div class="crs-block">
+        <h3>Casos de uso</h3>
+        <div class="svc-usecase">Campaña informativa sobre una obra pública o programa social</div>
+        <div class="svc-usecase">Comunicado y protocolo de respuesta ante una denuncia o crisis</div>
+        <div class="svc-usecase">Informe trimestral de gestión para la ciudadanía</div>
+      </div>
+
+      <div class="crs-block">
+        <h3>Cómo trabajamos</h3>
+        <div class="crs-timeline">
+          <div class="crs-tl-item"><div class="crs-tl-num">1</div><h4>Diagnóstico institucional</h4><p>Evaluamos la comunicación actual y la percepción ciudadana.</p></div>
+          <div class="crs-tl-item"><div class="crs-tl-num">2</div><h4>Plan de comunicación</h4><p>Definimos mensajes clave, canales y calendario.</p></div>
+          <div class="crs-tl-item"><div class="crs-tl-num">3</div><h4>Implementación</h4><p>Ejecutamos gestión de prensa, contenido y relaciones públicas.</p></div>
+          <div class="crs-tl-item"><div class="crs-tl-num">4</div><h4>Monitoreo y reporte</h4><p>Medimos impacto y entregamos informes de gestión.</p></div>
+        </div>
+      </div>
+
+      <div class="crs-block">
+        <h3>Por qué E&G</h3>
+        <div class="svc-why">Combinamos comunicación institucional tradicional con <strong>inteligencia artificial</strong>: monitoreamos en tiempo real la percepción ciudadana en redes y medios, para que cada mensaje de tu gestión llegue en el momento correcto.</div>
+      </div>
+
+      <div class="crs-block">
+        <h3>¿Para quién es?</h3>
+        <p class="sec-p" style="margin-bottom:0">Municipalidades, gobiernos regionales, entidades públicas y autoridades en gestión que buscan comunicar su trabajo de forma profesional y transparente.</p>
+      </div>
+
+      <div class="svc-cta">
+        <h3>¿Listo para fortalecer tu comunicación institucional?</h3>
+        <p>Agenda una consulta estratégica gratuita y descubre cómo E&G puede potenciar tu gestión.</p>
         <button class="btn-gold" style="padding:13px 32px;font-size:13px" onclick="nav('contacto')">Agenda tu consulta estratégica</button>
         <p class="svc-proof">9 campañas ganadas en 3 países de LATAM</p>
       </div>
